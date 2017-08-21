@@ -29,7 +29,7 @@ if (!config.FB_APP_SECRET) {
 if (!config.SERVER_URL) { //used for ink to static files
 	throw new Error('missing SERVER_URL');
 }
-<<<<<<< HEAD
+
 // if (!config.SENDGRID_API_KEY) { //sending email
 // 	throw new Error('missing SENGRID_API_KEY');
 // }
@@ -42,13 +42,7 @@ if (!config.SERVER_URL) { //used for ink to static files
 if (!config.WEATHER_API_KEY) { //weather api key
 	throw new Error('missing WEATHER_API_KEY');
 }
-=======
-if (!config.WEATHER_API_KEY) { //weather api key
-	throw new Error('missing WEATHER_API_KEY');
-}
 
-
->>>>>>> 94a74e07f24c743a8cfc7276845def5bf9572d82
 
 
 app.set('port', (process.env.PORT || 5000))
@@ -218,7 +212,7 @@ function handleEcho(messageId, appId, metadata) {
 
 function handleApiAiAction(sender, action, responseText, contexts, parameters) {
 	switch (action) {
-<<<<<<< HEAD
+
 		case "get-current-weather":
 			if (parameters.hasOwnProperty("geo-city") && parameters["geo-city"]!='') {
 
@@ -276,36 +270,6 @@ function handleApiAiAction(sender, action, responseText, contexts, parameters) {
 			}, 3000)
 
 
-=======
-		case 'get-current-weather':
-			if(parameters.hasOwnProperty('geo-city') && parameters['geo-city']!=''){
-				const request = require('request');
-				request({
-					url:'http://samples.openweathermap.org/data/2.5/weather',
-					qs: {
-						apiid: config.WEATHER_API_KEY,
-						q: parameters['geo-city'] //query string data
-					},
-					function(error, response, body){
-						if(!error && response.statusCode ==200){
-							let weather = JSON.parse(body);
-							if(weather.hasOwnProperty('weather')){
-								let reply = `${responseText} ${weather['weather'][0]['description']}`;
-								sendTextMessage(sender, reply);
-							}else{
-								sendTextMessage(sender,
-									`No weather forcast found for ${parameters['geo-city']}`
-								)
-							}
-						} else{
-							console.error(response.error);
-						}
-					}
-				})
-			} else {
-				sendTextMessage(sender, responseText);
-			}
->>>>>>> 94a74e07f24c743a8cfc7276845def5bf9572d82
 			break;
 		case "detailed-application":
 			if (isDefined(contexts[0]) &&
