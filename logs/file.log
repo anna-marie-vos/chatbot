@@ -7,3 +7,22 @@ L86: L86: L738 Received postback for user %d and page %d with payload '%s' { obj
        messaging: [Object] } ] }
 {"object":"page","entry":[{"id":"716401161884904","time":1506818721323,"messaging":[{"recipient":{"id":"716401161884904"},"timestamp":1506818721323,"sender":{"id":"1613871948645410"},"postback":{"payload":"FACEBOOK_WELCOME","title":"Get Started"}}]}]}
 at %d1613871948645410716401161884904FACEBOOK_WELCOME1506818721323
+testing testing
+L86: L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: { object: 'page',
+  entry: 
+   [ { id: '716401161884904',
+       time: 1506819241065,
+       messaging: [Object] } ] }
+{"object":"page","entry":[{"id":"716401161884904","time":1506819241065,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1506819240840,"message":{"mid":"mid.$cAALRZ0nY0kplBrI7iFe1Wzy3LWww","seq":1769,"text":"Hi"}}]}]}
+{ sender: { id: '1613871948645410' },
+  recipient: { id: '716401161884904' },
+  timestamp: 1506819240840,
+  message: 
+   { mid: 'mid.$cAALRZ0nY0kplBrI7iFe1Wzy3LWww',
+     seq: 1769,
+     text: 'Hi' } }
+16138719486454107164011618849041506819240840
+{"mid":"mid.$cAALRZ0nY0kplBrI7iFe1Wzy3LWww","seq":1769,"text":"Hi"}
+L280 -responseText: L281 -responseData: L282 -action: Hello!
+input.welcome
+undefined
