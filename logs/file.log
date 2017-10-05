@@ -1,28 +1,53 @@
 testing testing
-testing testing
-L86: L86: L738 Received postback for user %d and page %d with payload '%s' { object: 'page',
-  entry: 
-   [ { id: '716401161884904',
-       time: 1506818721323,
-       messaging: [Object] } ] }
-{"object":"page","entry":[{"id":"716401161884904","time":1506818721323,"messaging":[{"recipient":{"id":"716401161884904"},"timestamp":1506818721323,"sender":{"id":"1613871948645410"},"postback":{"payload":"FACEBOOK_WELCOME","title":"Get Started"}}]}]}
-at %d1613871948645410716401161884904FACEBOOK_WELCOME1506818721323
-testing testing
-L86: L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: { object: 'page',
-  entry: 
-   [ { id: '716401161884904',
-       time: 1506819241065,
-       messaging: [Object] } ] }
-{"object":"page","entry":[{"id":"716401161884904","time":1506819241065,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1506819240840,"message":{"mid":"mid.$cAALRZ0nY0kplBrI7iFe1Wzy3LWww","seq":1769,"text":"Hi"}}]}]}
+request
+L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: {"object":"page","entry":[{"id":"716401161884904","time":1507243744949,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507243744265,"message":{"mid":"mid.$cAALRZ0nY0kplH_-kCVe7rpbPAL7i","seq":1777,"text":"Hello"}}]}]}
 { sender: { id: '1613871948645410' },
   recipient: { id: '716401161884904' },
-  timestamp: 1506819240840,
+  timestamp: 1507243744265,
   message: 
-   { mid: 'mid.$cAALRZ0nY0kplBrI7iFe1Wzy3LWww',
-     seq: 1769,
-     text: 'Hi' } }
-16138719486454107164011618849041506819240840
-{"mid":"mid.$cAALRZ0nY0kplBrI7iFe1Wzy3LWww","seq":1769,"text":"Hi"}
+   { mid: 'mid.$cAALRZ0nY0kplH_-kCVe7rpbPAL7i',
+     seq: 1777,
+     text: 'Hello' } }
+16138719486454107164011618849041507243744265
+{"mid":"mid.$cAALRZ0nY0kplH_-kCVe7rpbPAL7i","seq":1777,"text":"Hello"}
 L280 -responseText: L281 -responseData: L282 -action: Hello!
 input.welcome
 undefined
+testing testing
+L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: {"object":"page","entry":[{"id":"716401161884904","time":1507245758934,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507245758697,"message":{"mid":"mid.$cAALRZ0nY0kplIB5g6Ve7tkYOxbgP","seq":1780,"text":"What jobs do you have available?"}}]}]}
+{ sender: { id: '1613871948645410' },
+  recipient: { id: '716401161884904' },
+  timestamp: 1507245758697,
+  message: 
+   { mid: 'mid.$cAALRZ0nY0kplIB5g6Ve7tkYOxbgP',
+     seq: 1780,
+     text: 'What jobs do you have available?' } }
+16138719486454107164011618849041507245758697
+{"mid":"mid.$cAALRZ0nY0kplIB5g6Ve7tkYOxbgP","seq":1780,"text":"What jobs do you have available?"}
+L280 -responseText: L281 -responseData: L282 -action: L578 sendQuickReply: recipientId: We are looking to a new shop assistant and accountant.
+undefined
+job-enquiry
+1613871948645410 text: We are looking to a new shop assistant and accountant. replies: [ { content_type: 'text',
+    title: 'Sales Assistant',
+    payload: 'Sales Assistant' },
+  { content_type: 'text',
+    title: 'Accountant',
+    payload: 'Accountant' },
+  { content_type: 'text',
+    title: 'Not interested',
+    payload: 'Not interested' } ]
+L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: L177 Quick reply for message %s with payload %s{"object":"page","entry":[{"id":"716401161884904","time":1507245771231,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507245770930,"message":{"quick_reply":{"payload":"Sales Assistant"},"mid":"mid.$cAALRZ0nY0kplIB6Qsle7tlIB9ob5","seq":1785,"text":"Sales Assistant"}}]}]}
+{ sender: { id: '1613871948645410' },
+  recipient: { id: '716401161884904' },
+  timestamp: 1507245770930,
+  message: 
+   { quick_reply: { payload: 'Sales Assistant' },
+     mid: 'mid.$cAALRZ0nY0kplIB6Qsle7tlIB9ob5',
+     seq: 1785,
+     text: 'Sales Assistant' } }
+16138719486454107164011618849041507245770930
+{"quick_reply":{"payload":"Sales Assistant"},"mid":"mid.$cAALRZ0nY0kplIB6Qsle7tlIB9ob5","seq":1785,"text":"Sales Assistant"}
+mid.$cAALRZ0nY0kplIB6Qsle7tlIB9ob5Sales Assistant
+L281 -responseData: L280 -responseText: L282 -action: One more time?
+undefined
+input.unknown
