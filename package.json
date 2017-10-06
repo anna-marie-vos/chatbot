@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,7 @@
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
     "manu-file-log": "^1.0.5",
+    "nodemon": "^1.12.1",
     "pg": "6.1.2",
     "request": "^2.72.0",
     "sendgrid": "^4.2.0",

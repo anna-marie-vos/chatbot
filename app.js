@@ -10,7 +10,7 @@ const app = express();
 const uuid = require('uuid');
 const file = require('manu-file-log');
 
-file.log('testing testing')
+const message = require('./message');
 
 // Messenger API parameters
 if (!config.FB_PAGE_TOKEN) {
@@ -28,10 +28,6 @@ if (!config.FB_APP_SECRET) {
 if (!config.SERVER_URL) { //used for ink to static files
 	throw new Error('missing SERVER_URL');
 }
-
-
-
-app.set('port', (process.env.PORT || 5000))
 
 //verify request came from facebook
 app.use(bodyParser.json({
@@ -900,6 +896,4 @@ function isDefined(obj) {
 }
 
 // Spin up the server
-app.listen(app.get('port'), function () {
-	console.log('running on port', app.get('port'))
-})
+module.exports = app;
