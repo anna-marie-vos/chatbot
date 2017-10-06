@@ -1,53 +1,316 @@
 testing testing
-request
-L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: {"object":"page","entry":[{"id":"716401161884904","time":1507243744949,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507243744265,"message":{"mid":"mid.$cAALRZ0nY0kplH_-kCVe7rpbPAL7i","seq":1777,"text":"Hello"}}]}]}
+L86: L738 Received postback for user %d and page %d with payload '%s' {"object":"page","entry":[{"id":"716401161884904","time":1507249480096,"messaging":[{"recipient":{"id":"716401161884904"},"timestamp":1507249480096,"sender":{"id":"1613871948645410"},"postback":{"payload":"FACEBOOK_WELCOME","title":"Get Started"}}]}]}
+at %d1613871948645410716401161884904FACEBOOK_WELCOME1507249480096
+L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: {"object":"page","entry":[{"id":"716401161884904","time":1507249496250,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507249495938,"message":{"mid":"mid.$cAALRZ0nY0kplIFdngle7xIfEaQvl","seq":2019,"text":"do you have any job openings?"}}]}]}
 { sender: { id: '1613871948645410' },
   recipient: { id: '716401161884904' },
-  timestamp: 1507243744265,
+  timestamp: 1507249495938,
   message: 
-   { mid: 'mid.$cAALRZ0nY0kplH_-kCVe7rpbPAL7i',
-     seq: 1777,
-     text: 'Hello' } }
-16138719486454107164011618849041507243744265
-{"mid":"mid.$cAALRZ0nY0kplH_-kCVe7rpbPAL7i","seq":1777,"text":"Hello"}
-L280 -responseText: L281 -responseData: L282 -action: Hello!
-input.welcome
-undefined
-testing testing
-L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: {"object":"page","entry":[{"id":"716401161884904","time":1507245758934,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507245758697,"message":{"mid":"mid.$cAALRZ0nY0kplIB5g6Ve7tkYOxbgP","seq":1780,"text":"What jobs do you have available?"}}]}]}
-{ sender: { id: '1613871948645410' },
-  recipient: { id: '716401161884904' },
-  timestamp: 1507245758697,
-  message: 
-   { mid: 'mid.$cAALRZ0nY0kplIB5g6Ve7tkYOxbgP',
-     seq: 1780,
-     text: 'What jobs do you have available?' } }
-16138719486454107164011618849041507245758697
-{"mid":"mid.$cAALRZ0nY0kplIB5g6Ve7tkYOxbgP","seq":1780,"text":"What jobs do you have available?"}
-L280 -responseText: L281 -responseData: L282 -action: L578 sendQuickReply: recipientId: We are looking to a new shop assistant and accountant.
+   { mid: 'mid.$cAALRZ0nY0kplIFdngle7xIfEaQvl',
+     seq: 2019,
+     text: 'do you have any job openings?' } }
+16138719486454107164011618849041507249495938
+{"mid":"mid.$cAALRZ0nY0kplIFdngle7xIfEaQvl","seq":2019,"text":"do you have any job openings?"}
+L280 -responseText: L281 -responseData: L282 -action: L578 sendQuickReply: recipientId: 
 undefined
 job-enquiry
-1613871948645410 text: We are looking to a new shop assistant and accountant. replies: [ { content_type: 'text',
-    title: 'Sales Assistant',
-    payload: 'Sales Assistant' },
+1613871948645410 text: jobs replies: [ { content_type: 'text',
+    title: 'accountant',
+    payload: 'accountant' },
   { content_type: 'text',
-    title: 'Accountant',
-    payload: 'Accountant' },
+    title: 'Sales assistant',
+    payload: 'Sales assistant' },
   { content_type: 'text',
-    title: 'Not interested',
-    payload: 'Not interested' } ]
-L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: L177 Quick reply for message %s with payload %s{"object":"page","entry":[{"id":"716401161884904","time":1507245771231,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507245770930,"message":{"quick_reply":{"payload":"Sales Assistant"},"mid":"mid.$cAALRZ0nY0kplIB6Qsle7tlIB9ob5","seq":1785,"text":"Sales Assistant"}}]}]}
+    title: 'not interested',
+    payload: 'not interested' } ]
+L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: L177 Quick reply for message %s with payload %s{"object":"page","entry":[{"id":"716401161884904","time":1507249501159,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507249500924,"message":{"quick_reply":{"payload":"accountant"},"mid":"mid.$cAALRZ0nY0kplIFd6_Fe7xIyeaekN","seq":2022,"text":"accountant"}}]}]}
 { sender: { id: '1613871948645410' },
   recipient: { id: '716401161884904' },
-  timestamp: 1507245770930,
+  timestamp: 1507249500924,
   message: 
-   { quick_reply: { payload: 'Sales Assistant' },
-     mid: 'mid.$cAALRZ0nY0kplIB6Qsle7tlIB9ob5',
-     seq: 1785,
-     text: 'Sales Assistant' } }
-16138719486454107164011618849041507245770930
-{"quick_reply":{"payload":"Sales Assistant"},"mid":"mid.$cAALRZ0nY0kplIB6Qsle7tlIB9ob5","seq":1785,"text":"Sales Assistant"}
-mid.$cAALRZ0nY0kplIB6Qsle7tlIB9ob5Sales Assistant
-L281 -responseData: L280 -responseText: L282 -action: One more time?
+   { quick_reply: { payload: 'accountant' },
+     mid: 'mid.$cAALRZ0nY0kplIFd6_Fe7xIyeaekN',
+     seq: 2022,
+     text: 'accountant' } }
+16138719486454107164011618849041507249500924
+{"quick_reply":{"payload":"accountant"},"mid":"mid.$cAALRZ0nY0kplIFd6_Fe7xIyeaekN","seq":2022,"text":"accountant"}
+mid.$cAALRZ0nY0kplIFd6_Fe7xIyeaekNaccountant
+L280 -responseText: L281 -responseData: L282 -action: undefined
+job-application
+I'll need to take your details. Write OK to continue
+L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: { sender: { id: '1613871948645410' },
+  recipient: { id: '716401161884904' },
+  timestamp: 1507249504758,
+  message: 
+   { mid: 'mid.$cAALRZ0nY0kplIFeJ9le7xJBiZWZo',
+     seq: 2025,
+     text: 'ok' } }
+{"object":"page","entry":[{"id":"716401161884904","time":1507249504987,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507249504758,"message":{"mid":"mid.$cAALRZ0nY0kplIFeJ9le7xJBiZWZo","seq":2025,"text":"ok"}}]}]}
+16138719486454107164011618849041507249504758
+{"mid":"mid.$cAALRZ0nY0kplIFeJ9le7xJBiZWZo","seq":2025,"text":"ok"}
+L280 -responseText: L281 -responseData: L282 -action: L192 content is: Please provide your name
+undefined
+detailed-application
+{ 'phone-number': '',
+  'previous-job': '',
+  'user-name': '',
+  'years-of-experience.original': '',
+  'phone-number.original': '',
+  'job-vacancy.original': 'accountant',
+  'previous-job.original': '',
+  'user-name.original': '',
+  'job-vacancy': 'accountant',
+  'years-of-experience': '' }
+L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: {"object":"page","entry":[{"id":"716401161884904","time":1507249520689,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507249520442,"message":{"mid":"mid.$cAALRZ0nY0kplIFfHOle7xJ-xyk-3","seq":2026,"text":"ok"}}]}]}
+{ sender: { id: '1613871948645410' },
+  recipient: { id: '716401161884904' },
+  timestamp: 1507249520442,
+  message: 
+   { mid: 'mid.$cAALRZ0nY0kplIFfHOle7xJ-xyk-3',
+     seq: 2026,
+     text: 'ok' } }
+16138719486454107164011618849041507249520442
+{"mid":"mid.$cAALRZ0nY0kplIFfHOle7xJ-xyk-3","seq":2026,"text":"ok"}
+L280 -responseText: L281 -responseData: L282 -action: L192 content is: What is your current job position?
+undefined
+detailed-application
+{ 'phone-number': '',
+  'previous-job': '',
+  'user-name': 'ok',
+  'years-of-experience.original': '',
+  'phone-number.original': '',
+  'job-vacancy.original': 'accountant',
+  'previous-job.original': '',
+  'user-name.original': 'ok',
+  'job-vacancy': 'accountant',
+  'years-of-experience': '' }
+L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: {"object":"page","entry":[{"id":"716401161884904","time":1507249534122,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507249533891,"message":{"mid":"mid.$cAALRZ0nY0kplIFf7w1e7xKzSn_4q","seq":2027,"text":"do you have any job openings?"}}]}]}
+{ sender: { id: '1613871948645410' },
+  recipient: { id: '716401161884904' },
+  timestamp: 1507249533891,
+  message: 
+   { mid: 'mid.$cAALRZ0nY0kplIFf7w1e7xKzSn_4q',
+     seq: 2027,
+     text: 'do you have any job openings?' } }
+16138719486454107164011618849041507249533891
+{"mid":"mid.$cAALRZ0nY0kplIFf7w1e7xKzSn_4q","seq":2027,"text":"do you have any job openings?"}
+L280 -responseText: L282 -action: L281 -responseData: L192 content is: How many years of experience do you have?
+detailed-application
+undefined
+{ 'phone-number': '',
+  'previous-job': 'do you have any job openings',
+  'user-name': 'ok',
+  'years-of-experience.original': '',
+  'phone-number.original': '',
+  'job-vacancy.original': 'accountant',
+  'previous-job.original': 'do you have any job openings?',
+  'user-name.original': 'ok',
+  'job-vacancy': 'accountant',
+  'years-of-experience': '' }
+L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: {"object":"page","entry":[{"id":"716401161884904","time":1507249541767,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507249541542,"message":{"mid":"mid.$cAALRZ0nY0kplIFgZple7xLROfCwp","seq":2028,"text":"OK"}}]}]}
+{ sender: { id: '1613871948645410' },
+  recipient: { id: '716401161884904' },
+  timestamp: 1507249541542,
+  message: 
+   { mid: 'mid.$cAALRZ0nY0kplIFgZple7xLROfCwp',
+     seq: 2028,
+     text: 'OK' } }
+16138719486454107164011618849041507249541542
+{"mid":"mid.$cAALRZ0nY0kplIFgZple7xLROfCwp","seq":2028,"text":"OK"}
+L280 -responseText: L281 -responseData: L282 -action: L192 content is: Tell me your phone number
+detailed-application
+{ 'phone-number': '',
+  'previous-job': 'do you have any job openings',
+  'user-name': 'ok',
+  'years-of-experience.original': 'OK',
+  'phone-number.original': '',
+  'job-vacancy.original': 'accountant',
+  'previous-job.original': 'do you have any job openings?',
+  'user-name.original': 'ok',
+  'job-vacancy': 'accountant',
+  'years-of-experience': 'OK' }
+undefined
+L86: L738 Received postback for user %d and page %d with payload '%s' {"object":"page","entry":[{"id":"716401161884904","time":1507249610851,"messaging":[{"recipient":{"id":"716401161884904"},"timestamp":1507249610851,"sender":{"id":"1613871948645410"},"postback":{"payload":"FACEBOOK_WELCOME","title":"Get Started"}}]}]}
+at %d1613871948645410716401161884904FACEBOOK_WELCOME1507249610851
+L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: {"object":"page","entry":[{"id":"716401161884904","time":1507249622389,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507249621997,"message":{"mid":"mid.$cAALRZ0nY0kplIFlT7Ve7xQLhSFKp","seq":2034,"text":"do you have any job openings?"}}]}]}
+{ sender: { id: '1613871948645410' },
+  recipient: { id: '716401161884904' },
+  timestamp: 1507249621997,
+  message: 
+   { mid: 'mid.$cAALRZ0nY0kplIFlT7Ve7xQLhSFKp',
+     seq: 2034,
+     text: 'do you have any job openings?' } }
+16138719486454107164011618849041507249621997
+{"mid":"mid.$cAALRZ0nY0kplIFlT7Ve7xQLhSFKp","seq":2034,"text":"do you have any job openings?"}
+L280 -responseText: L281 -responseData: L282 -action: L192 content is: undefined
+Thank you ok for your application.
+detailed-application
+{ 'phone-number': 'do you have any job openings',
+  'previous-job': 'do you have any job openings',
+  'user-name': 'ok',
+  'years-of-experience.original': 'OK',
+  'phone-number.original': 'do you have any job openings?',
+  'job-vacancy.original': 'accountant',
+  'previous-job.original': 'do you have any job openings?',
+  'user-name.original': 'ok',
+  'job-vacancy': 'accountant',
+  'years-of-experience': 'OK' }
+testing testing
+L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: {"object":"page","entry":[{"id":"716401161884904","time":1507249705609,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507249682424,"message":{"mid":"mid.$cAALRZ0nY0kplIFo_-Fe7xT3guPXj","seq":2035,"text":"hello"}}]}]}
+{ sender: { id: '1613871948645410' },
+  recipient: { id: '716401161884904' },
+  timestamp: 1507249682424,
+  message: 
+   { mid: 'mid.$cAALRZ0nY0kplIFo_-Fe7xT3guPXj',
+     seq: 2035,
+     text: 'hello' } }
+16138719486454107164011618849041507249682424
+{"mid":"mid.$cAALRZ0nY0kplIFo_-Fe7xT3guPXj","seq":2035,"text":"hello"}
+L280 -responseText: L281 -responseData: L282 -action: Greetings!
+undefined
+input.welcome
+L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: {"object":"page","entry":[{"id":"716401161884904","time":1507249727988,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507249727766,"message":{"mid":"mid.$cAALRZ0nY0kplIFrxFle7xWosevql","seq":2039,"text":"do you have any job openings?"}}]}]}
+{ sender: { id: '1613871948645410' },
+  recipient: { id: '716401161884904' },
+  timestamp: 1507249727766,
+  message: 
+   { mid: 'mid.$cAALRZ0nY0kplIFrxFle7xWosevql',
+     seq: 2039,
+     text: 'do you have any job openings?' } }
+16138719486454107164011618849041507249727766
+{"mid":"mid.$cAALRZ0nY0kplIFrxFle7xWosevql","seq":2039,"text":"do you have any job openings?"}
+L280 -responseText: L281 -responseData: L282 -action: L578 sendQuickReply: recipientId: 
+undefined
+job-enquiry
+1613871948645410 text: jobs replies: [ { content_type: 'text',
+    title: 'accountant',
+    payload: 'accountant' },
+  { content_type: 'text',
+    title: 'Sales assistant',
+    payload: 'Sales assistant' },
+  { content_type: 'text',
+    title: 'not interested',
+    payload: 'not interested' } ]
+L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: L177 Quick reply for message %s with payload %s{"object":"page","entry":[{"id":"716401161884904","time":1507249732894,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507249732637,"message":{"quick_reply":{"payload":"accountant"},"mid":"mid.$cAALRZ0nY0kplIFsEHVe7xW7uBHgB","seq":2042,"text":"accountant"}}]}]}
+{ sender: { id: '1613871948645410' },
+  recipient: { id: '716401161884904' },
+  timestamp: 1507249732637,
+  message: 
+   { quick_reply: { payload: 'accountant' },
+     mid: 'mid.$cAALRZ0nY0kplIFsEHVe7xW7uBHgB',
+     seq: 2042,
+     text: 'accountant' } }
+16138719486454107164011618849041507249732637
+{"quick_reply":{"payload":"accountant"},"mid":"mid.$cAALRZ0nY0kplIFsEHVe7xW7uBHgB","seq":2042,"text":"accountant"}
+mid.$cAALRZ0nY0kplIFsEHVe7xW7uBHgBaccountant
+L280 -responseText: L281 -responseData: L282 -action: undefined
+job-application
+I'll need to take your details. Write OK to continue
+L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: {"object":"page","entry":[{"id":"716401161884904","time":1507249737969,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507249737651,"message":{"mid":"mid.$cAALRZ0nY0kplIFsXs1e7xXPTREQx","seq":2045,"text":"OK"}}]}]}
+{ sender: { id: '1613871948645410' },
+  recipient: { id: '716401161884904' },
+  timestamp: 1507249737651,
+  message: 
+   { mid: 'mid.$cAALRZ0nY0kplIFsXs1e7xXPTREQx',
+     seq: 2045,
+     text: 'OK' } }
+16138719486454107164011618849041507249737651
+{"mid":"mid.$cAALRZ0nY0kplIFsXs1e7xXPTREQx","seq":2045,"text":"OK"}
+L280 -responseText: L281 -responseData: L282 -action: undefined
+detailed-application
+Please provide your name
+L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: {"object":"page","entry":[{"id":"716401161884904","time":1507249746860,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507249746546,"message":{"mid":"mid.$cAALRZ0nY0kplIFs6cle7xXyD3QCU","seq":2046,"text":"Anna"}}]}]}
+{ sender: { id: '1613871948645410' },
+  recipient: { id: '716401161884904' },
+  timestamp: 1507249746546,
+  message: 
+   { mid: 'mid.$cAALRZ0nY0kplIFs6cle7xXyD3QCU',
+     seq: 2046,
+     text: 'Anna' } }
+{"mid":"mid.$cAALRZ0nY0kplIFs6cle7xXyD3QCU","seq":2046,"text":"Anna"}
+16138719486454107164011618849041507249746546
+L280 -responseText: L281 -responseData: L282 -action: L192 content is: undefined
+detailed-application
+{ 'phone-number': '',
+  'previous-job': '',
+  'user-name': 'Anna',
+  'years-of-experience.original': '',
+  'phone-number.original': '',
+  'job-vacancy.original': 'accountant',
+  'previous-job.original': '',
+  'user-name.original': 'Anna',
+  'job-vacancy': 'accountant',
+  'years-of-experience': '' }
+What is your current job position?
+L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: {"object":"page","entry":[{"id":"716401161884904","time":1507249751556,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507249751324,"message":{"mid":"mid.$cAALRZ0nY0kplIFtNHFe7xYEmxl8V","seq":2047,"text":"234234"}}]}]}
+{ sender: { id: '1613871948645410' },
+  recipient: { id: '716401161884904' },
+  timestamp: 1507249751324,
+  message: 
+   { mid: 'mid.$cAALRZ0nY0kplIFtNHFe7xYEmxl8V',
+     seq: 2047,
+     text: '234234' } }
+16138719486454107164011618849041507249751324
+{"mid":"mid.$cAALRZ0nY0kplIFtNHFe7xYEmxl8V","seq":2047,"text":"234234"}
+L280 -responseText: L282 -action: L281 -responseData: How many years of experience do you have?
+detailed-application
+undefined
+L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: {"object":"page","entry":[{"id":"716401161884904","time":1507249755341,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507249755105,"message":{"mid":"mid.$cAALRZ0nY0kplIFtb4Ve7xYTfNYTm","seq":2048,"text":"33eee"}}]}]}
+{ sender: { id: '1613871948645410' },
+  recipient: { id: '716401161884904' },
+  timestamp: 1507249755105,
+  message: 
+   { mid: 'mid.$cAALRZ0nY0kplIFtb4Ve7xYTfNYTm',
+     seq: 2048,
+     text: '33eee' } }
+16138719486454107164011618849041507249755105
+{"mid":"mid.$cAALRZ0nY0kplIFtb4Ve7xYTfNYTm","seq":2048,"text":"33eee"}
+L280 -responseText: L281 -responseData: L282 -action: L192 content is: Tell me your phone number
+undefined
+detailed-application
+{ 'phone-number': '',
+  'previous-job': '234234',
+  'user-name': 'Anna',
+  'years-of-experience.original': '33eee',
+  'phone-number.original': '',
+  'job-vacancy.original': 'accountant',
+  'previous-job.original': '234234',
+  'user-name.original': 'Anna',
+  'job-vacancy': 'accountant',
+  'years-of-experience': '33eee' }
+L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: {"object":"page","entry":[{"id":"716401161884904","time":1507249759487,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507249759273,"message":{"mid":"mid.$cAALRZ0nY0kplIFtsKVe7xYjxznA7","seq":2049,"text":"bbggb"}}]}]}
+{ sender: { id: '1613871948645410' },
+  recipient: { id: '716401161884904' },
+  timestamp: 1507249759273,
+  message: 
+   { mid: 'mid.$cAALRZ0nY0kplIFtsKVe7xYjxznA7',
+     seq: 2049,
+     text: 'bbggb' } }
+16138719486454107164011618849041507249759273
+{"mid":"mid.$cAALRZ0nY0kplIFtsKVe7xYjxznA7","seq":2049,"text":"bbggb"}
+L280 -responseText: L281 -responseData: L282 -action: L192 content is: Thank you Anna for your application.
+undefined
+detailed-application
+{ 'phone-number': 'bbggb',
+  'previous-job': '234234',
+  'user-name': 'Anna',
+  'years-of-experience.original': '33eee',
+  'phone-number.original': 'bbggb',
+  'job-vacancy.original': 'accountant',
+  'previous-job.original': '234234',
+  'user-name.original': 'Anna',
+  'job-vacancy': 'accountant',
+  'years-of-experience': '33eee' }
+L86: L131 event: L139 Received message for user %d and page %d at %d with message:L140 message: {"object":"page","entry":[{"id":"716401161884904","time":1507249762614,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507249762395,"message":{"mid":"mid.$cAALRZ0nY0kplIFt4W1e7xYv-LnEv","seq":2050,"text":"fdfd"}}]}]}
+{ sender: { id: '1613871948645410' },
+  recipient: { id: '716401161884904' },
+  timestamp: 1507249762395,
+  message: 
+   { mid: 'mid.$cAALRZ0nY0kplIFt4W1e7xYv-LnEv',
+     seq: 2050,
+     text: 'fdfd' } }
+16138719486454107164011618849041507249762395
+{"mid":"mid.$cAALRZ0nY0kplIFt4W1e7xYv-LnEv","seq":2050,"text":"fdfd"}
+L280 -responseText: L281 -responseData: L282 -action: Sorry, could you say that again?
 undefined
 input.unknown

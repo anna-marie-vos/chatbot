@@ -187,6 +187,11 @@ function handleEcho(messageId, appId, metadata) {
 
 function handleApiAiAction(sender, action, responseText, contexts, parameters) {
 	switch (action) {
+		// case 'detailed-application':
+		// 	if(isDefined(contexts[0]) && contexts[0].name =="job_application" &&contexts[0].parameters){
+		// 		file.log("L192 content is: ",contexts[0].parameters)
+		// 	}
+		// 	break;
 		case 'job-enquiry':
 			let replies = [
 	      {
@@ -206,6 +211,7 @@ function handleApiAiAction(sender, action, responseText, contexts, parameters) {
 	      }
 	    ]
 			sendQuickReply(sender, responseText, replies);
+			break;
 		default:
 			//unhandled action, just send back the text
 			sendTextMessage(sender, responseText);
