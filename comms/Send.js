@@ -4,13 +4,12 @@ const Actions = require('./Actions');
  * Turn typing indicator on
  */
 function typingOn(recipientId) {
-	var messageData = {
+	const messageData = {
 		recipient: {
 			id: recipientId
 		},
 		sender_action: "typing_on"
 	};
-
 	Actions.callSendAPI(messageData);
 }
 
@@ -18,15 +17,12 @@ function typingOn(recipientId) {
  * Turn typing indicator off
  */
 function typingOff(recipientId) {
-
-
-	var messageData = {
+	const messageData = {
 		recipient: {
 			id: recipientId
 		},
 		sender_action: "typing_off"
 	};
-
 	Actions.callSendAPI(messageData);
 }
 
