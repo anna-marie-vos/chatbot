@@ -10,7 +10,7 @@ const app = express();
 const uuid = require('uuid');
 const file = require('manu-file-log');
 
-const message = require('./message');
+const actions = require('./comms/actions');
 
 // Messenger API parameters
 if (!config.FB_PAGE_TOKEN) {
@@ -61,7 +61,6 @@ app.get('/', function (req, res) {
 
 // for Facebook verification
 app.get('/webhook/', function (req, res) {
-	file.log("L68 request");
 	if (req.query['hub.mode'] === 'subscribe' && req.query['hub.verify_token'] === config.FB_VERIFY_TOKEN) {
 		res.status(200).send(req.query['hub.challenge']);
 	} else {
@@ -79,7 +78,7 @@ app.get('/webhook/', function (req, res) {
  */
 app.post('/webhook/', function (req, res) {
 	var data = req.body;
-	file.log('L86: ',JSON.stringify(data));
+	// file.log('L86: ',JSON.stringify(data));
 
 
 
@@ -106,7 +105,7 @@ app.post('/webhook/', function (req, res) {
 				} else if (messagingEvent.account_linking) {
 					receivedAccountLink(messagingEvent);
 				} else {
-					file.log("L113 Webhook received unknown messagingEvent: ", messagingEvent);
+					// file.log("L113 Webhook received unknown messagingEvent: ", messagingEvent);
 					console.log("Webhook received unknown messagingEvent: ", messagingEvent);
 				}
 			});
@@ -123,7 +122,6 @@ app.post('/webhook/', function (req, res) {
 
 
 function receivedMessage(event) {
-	file.log('L131 event: ', event)
 	var senderID = event.sender.id;
 	var recipientID = event.recipient.id;
 	var timeOfMessage = event.timestamp;
@@ -132,8 +130,8 @@ function receivedMessage(event) {
 	if (!sessionIds.has(senderID)) {
 		sessionIds.set(senderID, uuid.v1());
 	}
-	file.log("L139 Received message for user %d and page %d at %d with message:", senderID, recipientID, timeOfMessage);
-	file.log("L140 message: ",JSON.stringify(message));
+	// file.log("L139 Received message for user %d and page %d at %d with message:", senderID, recipientID, timeOfMessage);
+	// file.log("L140 message: ",JSON.stringify(message));
 
 	var isEcho = message.is_echo;
 	var messageId = message.mid;
@@ -170,7 +168,7 @@ function handleMessageAttachments(messageAttachments, senderID){
 
 function handleQuickReply(senderID, quickReply, messageId) {
 	var quickReplyPayload = quickReply.payload;
-	file.log("L177 Quick reply for message %s with payload %s", messageId, quickReplyPayload);
+	// file.log("L177 Quick reply for message %s with payload %s", messageId, quickReplyPayload);
 	//send payload to api.ai
 	sendToApiAi(senderID, quickReplyPayload);
 }
@@ -178,7 +176,7 @@ function handleQuickReply(senderID, quickReply, messageId) {
 //https://developers.facebook.com/docs/messenger-platform/webhook-reference/message-echo
 function handleEcho(messageId, appId, metadata) {
 	// Just logging message echoes to console
-	file.log("L185 Received echo for message %s and app %d with metadata %s", messageId, appId, metadata);
+	// file.log("L185 Received echo for message %s and app %d with metadata %s", messageId, appId, metadata);
 }
 
 function handleApiAiAction(sender, action, responseText, contexts, parameters) {
@@ -245,7 +243,7 @@ function handleMessage(message, sender) {
 
 			};
 
-			callSendAPI(messageData);
+			actions.callSendAPI(messageData);
 
 			break;
 	}
@@ -298,10 +296,6 @@ function handleApiAiResponse(sender, response) {
 	let contexts = response.result.contexts;
 	let parameters = response.result.parameters;
 
-	file.log('L280 -responseText: ',responseText);
-	file.log('L281 -responseData: ',responseData);
-	file.log('L282 -action: ',action);
-
 	sendTypingOff(sender);
 
 	if (isDefined(messages) && (messages.length == 1 && messages[0].type != 0 || messages.length > 1)) {
@@ -335,7 +329,7 @@ function handleApiAiResponse(sender, response) {
 		}
 	} else if (responseText == '' && !isDefined(action)) {
 		//api ai could not evaluate input.
-		file.log('L317 Unknown query ' , response.result.resolvedQuery);
+		// file.log('L317 Unknown query ' , response.result.resolvedQuery);
 		sendTextMessage(sender, "I'm not sure what you want. Can you be more specific?");
 	} else if (isDefined(action)) {
 		handleApiAiAction(sender, action, responseText, contexts, parameters);
@@ -381,7 +375,8 @@ function sendTextMessage(recipientId, text) {
 			text: text
 		}
 	}
-	callSendAPI(messageData);
+	actions.callSendAPI(messageData);
+
 }
 
 /*
@@ -403,7 +398,7 @@ function sendImageMessage(recipientId, imageUrl) {
 		}
 	};
 
-	callSendAPI(messageData);
+	actions.callSendAPI(messageData);
 }
 
 /*
@@ -425,7 +420,7 @@ function sendGifMessage(recipientId) {
 		}
 	};
 
-	callSendAPI(messageData);
+	actions.callSendAPI(messageData);
 }
 
 /*
@@ -447,7 +442,7 @@ function sendAudioMessage(recipientId) {
 		}
 	};
 
-	callSendAPI(messageData);
+	actions.callSendAPI(messageData);
 }
 
 /*
@@ -469,7 +464,7 @@ function sendVideoMessage(recipientId, videoName) {
 		}
 	};
 
-	callSendAPI(messageData);
+	actions.callSendAPI(messageData);
 }
 
 /*
@@ -491,7 +486,7 @@ function sendFileMessage(recipientId, fileName) {
 		}
 	};
 
-	callSendAPI(messageData);
+	actions.callSendAPI(messageData);
 }
 
 
@@ -517,7 +512,7 @@ function sendButtonMessage(recipientId, text, buttons) {
 		}
 	};
 
-	callSendAPI(messageData);
+	actions.callSendAPI(messageData);
 }
 
 
@@ -537,7 +532,7 @@ function sendGenericMessage(recipientId, elements) {
 		}
 	};
 
-	callSendAPI(messageData);
+	actions.callSendAPI(messageData);
 }
 
 
@@ -569,7 +564,7 @@ function sendReceiptMessage(recipientId, recipient_name, currency, payment_metho
 		}
 	};
 
-	callSendAPI(messageData);
+	actions.callSendAPI(messageData);
 }
 
 /*
@@ -577,7 +572,7 @@ function sendReceiptMessage(recipientId, recipient_name, currency, payment_metho
  *
  */
 function sendQuickReply(recipientId, text, replies, metadata) {
-	file.log("L578 sendQuickReply: recipientId: ",recipientId," text: ",text," replies: ",replies)
+	// file.log("L578 sendQuickReply: recipientId: ",recipientId," text: ",text," replies: ",replies)
 	var messageData = {
 		recipient: {
 			id: recipientId
@@ -589,7 +584,7 @@ function sendQuickReply(recipientId, text, replies, metadata) {
 		}
 	};
 
-	callSendAPI(messageData);
+	actions.callSendAPI(messageData);
 }
 
 /*
@@ -605,7 +600,7 @@ function sendReadReceipt(recipientId) {
 		sender_action: "mark_seen"
 	};
 
-	callSendAPI(messageData);
+	actions.callSendAPI(messageData);
 }
 
 /*
@@ -622,7 +617,7 @@ function sendTypingOn(recipientId) {
 		sender_action: "typing_on"
 	};
 
-	callSendAPI(messageData);
+	actions.callSendAPI(messageData);
 }
 
 /*
@@ -639,7 +634,7 @@ function sendTypingOff(recipientId) {
 		sender_action: "typing_off"
 	};
 
-	callSendAPI(messageData);
+	actions.callSendAPI(messageData);
 }
 
 /*
@@ -666,7 +661,7 @@ function sendAccountLinking(recipientId) {
 		}
 	};
 
-	callSendAPI(messageData);
+	actions.callSendAPI(messageData);
 }
 
 
@@ -699,39 +694,6 @@ function greetUserText(userId) {
 	});
 }
 
-/*
- * Call the Send API. The message data goes in the body. If successful, we'll
- * get the message id in a response
- *
- */
-function callSendAPI(messageData) {
-	request({
-		uri: 'https://graph.facebook.com/v2.6/me/messages',
-		qs: {
-			access_token: config.FB_PAGE_TOKEN
-		},
-		method: 'POST',
-		json: messageData
-
-	}, function (error, response, body) {
-		if (!error && response.statusCode == 200) {
-			var recipientId = body.recipient_id;
-			var messageId = body.message_id;
-
-			if (messageId) {
-				console.log("Successfully sent message with id %s to recipient %s",
-					messageId, recipientId);
-			} else {
-				console.log("Successfully called Send API for recipient %s",
-					recipientId);
-			}
-		} else {
-			console.error("Failed calling Send API", response.statusCode, response.statusMessage, body.error);
-		}
-	});
-}
-
-
 
 /*
  * Postback Event
@@ -757,8 +719,8 @@ function receivedPostback(event) {
 
 	}
 
-	file.log("L738 Received postback for user %d and page %d with payload '%s' " ,
-		"at %d", senderID, recipientID, payload, timeOfPostback);
+	// file.log("L738 Received postback for user %d and page %d with payload '%s' " ,
+	// 	"at %d", senderID, recipientID, payload, timeOfPostback);
 
 }
 
