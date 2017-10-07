@@ -1,49 +1,18 @@
 L72 Failed validation. Make sure the validation tokens match.
-comms/actions.callSendAPI triggered, { recipient: { id: '1613871948645410' },
-  message: { text: 'I\'m not sure what you want. Can you be more specific?' } }
-comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplJXsEGVe9DW7sambo1613871948645410
-comms/actions.callSendAPI triggered, { recipient: { id: '1613871948645410' },
-  sender_action: 'typing_on' }
-comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
-comms/actions.callSendAPI triggered, comms/actions.callSendAPI triggered, { recipient: { id: '1613871948645410' },
-  sender_action: 'typing_off' }
-{ recipient: { id: '1613871948645410' },
-  message: { text: 'Greetings!' } }
-comms/actions.callSendAPI L20, Successfully called Send API for recipient %scomms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %s1613871948645410
-mid.$cAALRZ0nY0kplJXtSDVe9DYJqFt-a1613871948645410
-comms/actions.callSendAPI triggered, { recipient: { id: '1613871948645410' },
-  sender_action: 'typing_on' }
-comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
-comms/actions.callSendAPI triggered, comms/actions.callSendAPI triggered, { recipient: { id: '1613871948645410' },
-  message: { text: 'Hi!' } }
-{ recipient: { id: '1613871948645410' },
-  sender_action: 'typing_off' }
-comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
-comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplJX5xGle9DkoskYN61613871948645410
 L72 Failed validation. Make sure the validation tokens match.
 L72 Failed validation. Make sure the validation tokens match.
-comms/actions.callSendAPI triggered, { recipient: { id: '1613871948645410' },
+config token EAAJnD6FZAFZB8BAADGC0sVvQEK131wmJUsXD1J6bUdoVhfDVMkTcBvBLpuwV9Fc7mJVSqJtVCqxLcPe0Ma6ij6qldKt5xY41s6mnwnVhsF1PQZA3hCnlF6fctmZBjLkTyocNBOGGTGqzC6Eh7FZAazoRBqccTwGaRuAv736rsmQZDZD
+config token EAAJnD6FZAFZB8BAADGC0sVvQEK131wmJUsXD1J6bUdoVhfDVMkTcBvBLpuwV9Fc7mJVSqJtVCqxLcPe0Ma6ij6qldKt5xY41s6mnwnVhsF1PQZA3hCnlF6fctmZBjLkTyocNBOGGTGqzC6Eh7FZAazoRBqccTwGaRuAv736rsmQZDZD
+config token EAAJnD6FZAFZB8BAADGC0sVvQEK131wmJUsXD1J6bUdoVhfDVMkTcBvBLpuwV9Fc7mJVSqJtVCqxLcPe0Ma6ij6qldKt5xY41s6mnwnVhsF1PQZA3hCnlF6fctmZBjLkTyocNBOGGTGqzC6Eh7FZAazoRBqccTwGaRuAv736rsmQZDZD
+config token config token EAAJnD6FZAFZB8BAADGC0sVvQEK131wmJUsXD1J6bUdoVhfDVMkTcBvBLpuwV9Fc7mJVSqJtVCqxLcPe0Ma6ij6qldKt5xY41s6mnwnVhsF1PQZA3hCnlF6fctmZBjLkTyocNBOGGTGqzC6Eh7FZAazoRBqccTwGaRuAv736rsmQZDZD
+EAAJnD6FZAFZB8BAADGC0sVvQEK131wmJUsXD1J6bUdoVhfDVMkTcBvBLpuwV9Fc7mJVSqJtVCqxLcPe0Ma6ij6qldKt5xY41s6mnwnVhsF1PQZA3hCnlF6fctmZBjLkTyocNBOGGTGqzC6Eh7FZAazoRBqccTwGaRuAv736rsmQZDZD
+messageData { recipient: { id: '1613871948645410' },
   message: { text: 'I\'m not sure what you want. Can you be more specific?' } }
-comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplJZSXX1e9E9O9dBYg1613871948645410
-comms/actions.callSendAPI triggered, { recipient: { id: '1613871948645410' },
-  sender_action: 'typing_on' }
-comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
-comms/actions.callSendAPI triggered, comms/actions.callSendAPI triggered, { recipient: { id: '1613871948645410' },
-  sender_action: 'typing_off' }
-{ recipient: { id: '1613871948645410' },
-  message: { text: 'Hi!' } }
-comms/actions.callSendAPI L20, Successfully called Send API for recipient %scomms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %s1613871948645410
-mid.$cAALRZ0nY0kplJZTfUVe9E-W6JDyp1613871948645410
-L72 Failed validation. Make sure the validation tokens match.
-comms/actions.callSendAPI triggered, { recipient: { id: '1613871948645410' },
+messageData api.SendAPI triggered, { recipient: { id: '1613871948645410' },
   message: { text: 'I\'m not sure what you want. Can you be more specific?' } }
-comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplJZnZMle9FSQyTPxr1613871948645410
-comms/actions.callSendAPI triggered, { recipient: { id: '1613871948645410' },
-  sender_action: 'typing_on' }
-comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
-comms/actions.callSendAPI triggered, comms/actions.callSendAPI triggered, { recipient: { id: '1613871948645410' },
-  message: { text: 'Hi!' } }
 { recipient: { id: '1613871948645410' },
-  sender_action: 'typing_off' }
-comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
-comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplJZntHle9FSksyPL01613871948645410
+  message: { text: 'I\'m not sure what you want. Can you be more specific?' } }
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplKl6AJ1e-Rk3pVe6d1613871948645410
+api.SendAPI triggered, { recipient: { id: '1613871948645410' },
+  message: { text: 'I\'m not sure what you want. Can you be more specific?' } }
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplKmg1s1e-SLtPbuh91613871948645410

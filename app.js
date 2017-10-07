@@ -10,8 +10,8 @@ const app = express();
 const uuid = require('uuid');
 const file = require('manu-file-log');
 
-const Actions = require('./comms/Actions');
-const Send = require('./comms/Send');
+const api = require('./api');
+const src = require('./src');
 
 
 // Messenger API parameters
@@ -245,7 +245,7 @@ function handleMessage(message, sender) {
 
 			};
 
-			Actions.callSendAPI(messageData);
+			api.SendAPI(messageData);
 
 			break;
 	}
@@ -298,7 +298,7 @@ function handleApiAiResponse(sender, response) {
 	let contexts = response.result.contexts;
 	let parameters = response.result.parameters;
 
-	Send.typingOff(sender);
+	src.Typing.Off(sender);
 
 	if (isDefined(messages) && (messages.length == 1 && messages[0].type != 0 || messages.length > 1)) {
 		let timeoutInterval = 1100;
@@ -350,7 +350,7 @@ function handleApiAiResponse(sender, response) {
 
 function sendToApiAi(sender, text) {
 
-	Send.typingOn(sender);
+	src.Typing.On(sender);
 	let apiaiRequest = apiAiService.textRequest(text, {
 		sessionId: sessionIds.get(sender)
 	});
@@ -377,7 +377,7 @@ function sendTextMessage(recipientId, text) {
 			text: text
 		}
 	}
-	Actions.callSendAPI(messageData);
+	api.SendAPI(messageData);
 
 }
 
@@ -400,7 +400,7 @@ function sendImageMessage(recipientId, imageUrl) {
 		}
 	};
 
-	Actions.callSendAPI(messageData);
+	api.SendAPI(messageData);
 }
 
 /*
@@ -422,7 +422,7 @@ function sendGifMessage(recipientId) {
 		}
 	};
 
-	Actions.callSendAPI(messageData);
+	api.SendAPI(messageData);
 }
 
 /*
@@ -444,7 +444,7 @@ function sendAudioMessage(recipientId) {
 		}
 	};
 
-	Actions.callSendAPI(messageData);
+	api.SendAPI(messageData);
 }
 
 /*
@@ -466,7 +466,7 @@ function sendVideoMessage(recipientId, videoName) {
 		}
 	};
 
-	Actions.callSendAPI(messageData);
+	api.SendAPI(messageData);
 }
 
 /*
@@ -488,7 +488,7 @@ function sendFileMessage(recipientId, fileName) {
 		}
 	};
 
-	Actions.callSendAPI(messageData);
+	api.SendAPI(messageData);
 }
 
 
@@ -514,7 +514,7 @@ function sendButtonMessage(recipientId, text, buttons) {
 		}
 	};
 
-	Actions.callSendAPI(messageData);
+	api.SendAPI(messageData);
 }
 
 
@@ -534,7 +534,7 @@ function sendGenericMessage(recipientId, elements) {
 		}
 	};
 
-	Actions.callSendAPI(messageData);
+	api.SendAPI(messageData);
 }
 
 
@@ -566,7 +566,7 @@ function sendReceiptMessage(recipientId, recipient_name, currency, payment_metho
 		}
 	};
 
-	Actions.callSendAPI(messageData);
+	api.SendAPI(messageData);
 }
 
 /*
@@ -586,7 +586,7 @@ function sendQuickReply(recipientId, text, replies, metadata) {
 		}
 	};
 
-	Actions.callSendAPI(messageData);
+	api.SendAPI(messageData);
 }
 
 /*
@@ -602,7 +602,7 @@ function sendReadReceipt(recipientId) {
 		sender_action: "mark_seen"
 	};
 
-	Actions.callSendAPI(messageData);
+	api.SendAPI(messageData);
 }
 
 /*
@@ -629,7 +629,7 @@ function sendAccountLinking(recipientId) {
 		}
 	};
 
-	Actions.callSendAPI(messageData);
+	api.SendAPI(messageData);
 }
 
 
