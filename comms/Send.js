@@ -14,6 +14,23 @@ function typingOn(recipientId) {
 	Actions.callSendAPI(messageData);
 }
 
+/*
+ * Turn typing indicator off
+ */
+function typingOff(recipientId) {
+
+
+	var messageData = {
+		recipient: {
+			id: recipientId
+		},
+		sender_action: "typing_off"
+	};
+
+	Actions.callSendAPI(messageData);
+}
+
 module.exports = {
   typingOn,
+  typingOff,
 }

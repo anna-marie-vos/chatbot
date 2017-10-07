@@ -34,3 +34,16 @@ comms/actions.callSendAPI triggered, comms/actions.callSendAPI triggered, { reci
   message: { text: 'Hi!' } }
 comms/actions.callSendAPI L20, Successfully called Send API for recipient %scomms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %s1613871948645410
 mid.$cAALRZ0nY0kplJZTfUVe9E-W6JDyp1613871948645410
+L72 Failed validation. Make sure the validation tokens match.
+comms/actions.callSendAPI triggered, { recipient: { id: '1613871948645410' },
+  message: { text: 'I\'m not sure what you want. Can you be more specific?' } }
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplJZnZMle9FSQyTPxr1613871948645410
+comms/actions.callSendAPI triggered, { recipient: { id: '1613871948645410' },
+  sender_action: 'typing_on' }
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+comms/actions.callSendAPI triggered, comms/actions.callSendAPI triggered, { recipient: { id: '1613871948645410' },
+  message: { text: 'Hi!' } }
+{ recipient: { id: '1613871948645410' },
+  sender_action: 'typing_off' }
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplJZntHle9FSksyPL01613871948645410

@@ -298,7 +298,7 @@ function handleApiAiResponse(sender, response) {
 	let contexts = response.result.contexts;
 	let parameters = response.result.parameters;
 
-	sendTypingOff(sender);
+	Send.typingOff(sender);
 
 	if (isDefined(messages) && (messages.length == 1 && messages[0].type != 0 || messages.length > 1)) {
 		let timeoutInterval = 1100;
@@ -600,23 +600,6 @@ function sendReadReceipt(recipientId) {
 			id: recipientId
 		},
 		sender_action: "mark_seen"
-	};
-
-	Actions.callSendAPI(messageData);
-}
-
-/*
- * Turn typing indicator off
- *
- */
-function sendTypingOff(recipientId) {
-
-
-	var messageData = {
-		recipient: {
-			id: recipientId
-		},
-		sender_action: "typing_off"
 	};
 
 	Actions.callSendAPI(messageData);
