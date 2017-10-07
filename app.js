@@ -10,7 +10,9 @@ const app = express();
 const uuid = require('uuid');
 const file = require('manu-file-log');
 
-const actions = require('./comms/actions');
+const Actions = require('./comms/Actions');
+const Send = require('./comms/Send');
+
 
 // Messenger API parameters
 if (!config.FB_PAGE_TOKEN) {
@@ -243,7 +245,7 @@ function handleMessage(message, sender) {
 
 			};
 
-			actions.callSendAPI(messageData);
+			Actions.callSendAPI(messageData);
 
 			break;
 	}
@@ -348,7 +350,7 @@ function handleApiAiResponse(sender, response) {
 
 function sendToApiAi(sender, text) {
 
-	sendTypingOn(sender);
+	Send.typingOn(sender);
 	let apiaiRequest = apiAiService.textRequest(text, {
 		sessionId: sessionIds.get(sender)
 	});
@@ -375,7 +377,7 @@ function sendTextMessage(recipientId, text) {
 			text: text
 		}
 	}
-	actions.callSendAPI(messageData);
+	Actions.callSendAPI(messageData);
 
 }
 
@@ -398,7 +400,7 @@ function sendImageMessage(recipientId, imageUrl) {
 		}
 	};
 
-	actions.callSendAPI(messageData);
+	Actions.callSendAPI(messageData);
 }
 
 /*
@@ -420,7 +422,7 @@ function sendGifMessage(recipientId) {
 		}
 	};
 
-	actions.callSendAPI(messageData);
+	Actions.callSendAPI(messageData);
 }
 
 /*
@@ -442,7 +444,7 @@ function sendAudioMessage(recipientId) {
 		}
 	};
 
-	actions.callSendAPI(messageData);
+	Actions.callSendAPI(messageData);
 }
 
 /*
@@ -464,7 +466,7 @@ function sendVideoMessage(recipientId, videoName) {
 		}
 	};
 
-	actions.callSendAPI(messageData);
+	Actions.callSendAPI(messageData);
 }
 
 /*
@@ -486,7 +488,7 @@ function sendFileMessage(recipientId, fileName) {
 		}
 	};
 
-	actions.callSendAPI(messageData);
+	Actions.callSendAPI(messageData);
 }
 
 
@@ -512,7 +514,7 @@ function sendButtonMessage(recipientId, text, buttons) {
 		}
 	};
 
-	actions.callSendAPI(messageData);
+	Actions.callSendAPI(messageData);
 }
 
 
@@ -532,7 +534,7 @@ function sendGenericMessage(recipientId, elements) {
 		}
 	};
 
-	actions.callSendAPI(messageData);
+	Actions.callSendAPI(messageData);
 }
 
 
@@ -564,7 +566,7 @@ function sendReceiptMessage(recipientId, recipient_name, currency, payment_metho
 		}
 	};
 
-	actions.callSendAPI(messageData);
+	Actions.callSendAPI(messageData);
 }
 
 /*
@@ -584,7 +586,7 @@ function sendQuickReply(recipientId, text, replies, metadata) {
 		}
 	};
 
-	actions.callSendAPI(messageData);
+	Actions.callSendAPI(messageData);
 }
 
 /*
@@ -600,24 +602,7 @@ function sendReadReceipt(recipientId) {
 		sender_action: "mark_seen"
 	};
 
-	actions.callSendAPI(messageData);
-}
-
-/*
- * Turn typing indicator on
- *
- */
-function sendTypingOn(recipientId) {
-
-
-	var messageData = {
-		recipient: {
-			id: recipientId
-		},
-		sender_action: "typing_on"
-	};
-
-	actions.callSendAPI(messageData);
+	Actions.callSendAPI(messageData);
 }
 
 /*
@@ -634,7 +619,7 @@ function sendTypingOff(recipientId) {
 		sender_action: "typing_off"
 	};
 
-	actions.callSendAPI(messageData);
+	Actions.callSendAPI(messageData);
 }
 
 /*
@@ -661,7 +646,7 @@ function sendAccountLinking(recipientId) {
 		}
 	};
 
-	actions.callSendAPI(messageData);
+	Actions.callSendAPI(messageData);
 }
 
 
