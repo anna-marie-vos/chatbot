@@ -1,6 +1,5 @@
 
 const api = require('../../api');
-const src = require('../../src');
 const config = require('../../config');
 
 /*

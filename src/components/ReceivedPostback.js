@@ -1,5 +1,5 @@
 const api = require('../../api')
-const src = require('../../src')
+const SendTextMessage = require('./SendTextMessage')
 /*
  * Postback Event
  *
@@ -19,7 +19,7 @@ module.exports =function(event) {
 	switch (payload) {
 		default:
 			//unindentified payload
-			src.SendTextMessage(senderID, "I'm not sure what you want. Can you be more specific?");
+			SendTextMessage(senderID, "I'm not sure what you want. Can you be more specific?");
 			break;
 
 	}

@@ -1,5 +1,5 @@
 const api = require('../../api')
-const src = require('../../src')
+const SendTextMessage = require('./SendTextMessage')
 /*
  * Authorization Event
  *
@@ -26,5 +26,5 @@ module.exports =function(event) {
 
 	// When an authentication is received, we'll send a message back to the sender
 	// to let them know it was successful.
-	src.SendTextMessage(senderID, "Authentication successful");
+	SendTextMessage(senderID, "Authentication successful");
 }

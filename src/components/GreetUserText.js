@@ -1,8 +1,8 @@
 const request = require('request');
 const api = require('../../api');
-const src = require('../../src');
 const config = require('../../config');
 const bodyParser = require('body-parser');
+const SendTextMessage = require('./SendTextMessage')
 
 module.exports =function(userId) {
 	//first read user firstname
@@ -21,7 +21,7 @@ module.exports =function(userId) {
 				console.log("FB user: %s %s, %s",
 					user.first_name, user.last_name, user.gender);
 
-				src.SendTextMessage(userId, "Welcome " + user.first_name + '!');
+				SendTextMessage(userId, "Welcome " + user.first_name + '!');
 			} else {
 				console.log("Cannot get data for fb user with id",
 					userId);

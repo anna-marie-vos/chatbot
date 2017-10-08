@@ -1,10 +1,12 @@
 const api = require('../../api');
 const file = require('manu-file-log');
 
+/*
+* Turn typing indicator off
+*/
+
 module.exports = function(recipientId){
-	/*
-	* Turn typing indicator off
-	*/
+	file.log('typing off')
 		const messageData = {
 			recipient: {
 				id: recipientId

@@ -1,4 +1,35 @@
 typing on
 comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
-comms/actions.callSendAPI L20, Successfully called Send API for recipient %scomms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %s1613871948645410
-mid.$cAALRZ0nY0kplKofnXVe-UKe-IXSm1613871948645410
+L343 typing offTypeError: src.HandleApiAiAction is not a function
+    at Object.module.exports [as HandleApiAiResponse] (/home/amv/Workspace/chatbot/src/components/HandleApiAiResponse.js:52:7)
+    at TextRequest.apiaiRequest.on (/home/amv/Workspace/chatbot/app.js:215:8)
+    at emitOne (events.js:96:13)
+    at TextRequest.emit (events.js:188:7)
+    at IncomingMessage.<anonymous> (/home/amv/Workspace/chatbot/node_modules/apiai/module/request.js:42:26)
+    at emitNone (events.js:91:20)
+    at IncomingMessage.emit (events.js:185:7)
+    at endReadableNT (_stream_readable.js:974:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+typing on
+typing offL343 
+TypeError: src.SendTextMessage is not a function
+    at module.exports (/home/amv/Workspace/chatbot/src/components/HandleApiAiAction.js:33:8)
+    at Object.module.exports [as HandleApiAiResponse] (/home/amv/Workspace/chatbot/src/components/HandleApiAiResponse.js:53:3)
+    at TextRequest.apiaiRequest.on (/home/amv/Workspace/chatbot/app.js:215:8)
+    at emitOne (events.js:96:13)
+    at TextRequest.emit (events.js:188:7)
+    at IncomingMessage.<anonymous> (/home/amv/Workspace/chatbot/node_modules/apiai/module/request.js:42:26)
+    at emitNone (events.js:91:20)
+    at IncomingMessage.emit (events.js:185:7)
+    at endReadableNT (_stream_readable.js:974:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+typing on
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+typing off
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplKwDj2Ve-bubua_F_1613871948645410
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410

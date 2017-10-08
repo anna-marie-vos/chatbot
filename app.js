@@ -33,7 +33,7 @@ if (!config.SERVER_URL) { //used for ink to static files
 
 //verify request came from facebook
 app.use(bodyParser.json({
-	verify: verifyRequestSignature
+	verify: src.VerifyRequestSignature
 }));
 
 //serve static files in the public directory
@@ -146,7 +146,7 @@ function receivedMessage(event) {
 	var quickReply = message.quick_reply;
 
 	if (isEcho) {
-		handleEcho(messageId, appId, metadata);
+		src.HandleEcho(messageId, appId, metadata);
 		return;
 	} else if (quickReply) {
 		handleQuickReply(senderID, quickReply, messageId);
@@ -158,27 +158,16 @@ function receivedMessage(event) {
 		//send message to api.ai
 		sendToApiAi(senderID, messageText);
 	} else if (messageAttachments) {
-		handleMessageAttachments(messageAttachments, senderID);
+		src.HandleMessageAttachments(messageAttachments, senderID);
 	}
 }
 
-
-function handleMessageAttachments(messageAttachments, senderID){
-	//for now just reply
-	src.SendTextMessage(senderID, "Attachment received. Thank you.");
-}
 
 function handleQuickReply(senderID, quickReply, messageId) {
 	var quickReplyPayload = quickReply.payload;
 	// file.log("L177 Quick reply for message %s with payload %s", messageId, quickReplyPayload);
 	//send payload to api.ai
 	sendToApiAi(senderID, quickReplyPayload);
-}
-
-//https://developers.facebook.com/docs/messenger-platform/webhook-reference/message-echo
-function handleEcho(messageId, appId, metadata) {
-	// Just logging message echoes to console
-	// file.log("L185 Received echo for message %s and app %d with metadata %s", messageId, appId, metadata);
 }
 
 function handleApiAiAction(sender, action, responseText, contexts, parameters) {
@@ -214,140 +203,6 @@ function handleApiAiAction(sender, action, responseText, contexts, parameters) {
 	}
 }
 
-function handleMessage(message, sender) {
-	switch (message.type) {
-		case 0: //text
-			src.SendTextMessage(sender, message.speech);
-			break;
-		case 2: //quick replies
-			let replies = [];
-			for (var b = 0; b < message.replies.length; b++) {
-				let reply =
-				{
-					"content_type": "text",
-					"title": message.replies[b],
-					"payload": message.replies[b]
-				}
-				replies.push(reply);
-			}
-			src.SendQuickReply(sender, message.title, replies);
-			break;
-		case 3: //image
-			src.SendImageMessage(sender, message.imageUrl);
-			break;
-		case 4:
-			// custom payload
-			var messageData = {
-				recipient: {
-					id: sender
-				},
-				message: message.payload.facebook
-
-			};
-
-			api.SendAPI(messageData);
-
-			break;
-	}
-}
-
-
-function handleCardMessages(messages, sender) {
-
-	let elements = [];
-	for (var m = 0; m < messages.length; m++) {
-		let message = messages[m];
-		let buttons = [];
-		for (var b = 0; b < message.buttons.length; b++) {
-			let isLink = (message.buttons[b].postback.substring(0, 4) === 'http');
-			let button;
-			if (isLink) {
-				button = {
-					"type": "web_url",
-					"title": message.buttons[b].text,
-					"url": message.buttons[b].postback
-				}
-			} else {
-				button = {
-					"type": "postback",
-					"title": message.buttons[b].text,
-					"payload": message.buttons[b].postback
-				}
-			}
-			buttons.push(button);
-		}
-
-
-		let element = {
-			"title": message.title,
-			"image_url":message.imageUrl,
-			"subtitle": message.subtitle,
-			"buttons": buttons
-		};
-		elements.push(element);
-	}
-	src.SendGenericMessage(sender, elements);
-}
-
-
-function handleApiAiResponse(sender, response) {
-	let responseText = response.result.fulfillment.speech;
-	let responseData = response.result.fulfillment.data;
-	let messages = response.result.fulfillment.messages;
-	let action = response.result.action;
-	let contexts = response.result.contexts;
-	let parameters = response.result.parameters;
-
-	src.TypingOff(sender);
-
-	if (isDefined(messages) && (messages.length == 1 && messages[0].type != 0 || messages.length > 1)) {
-		let timeoutInterval = 1100;
-		let previousType ;
-		let cardTypes = [];
-		let timeout = 0;
-		for (var i = 0; i < messages.length; i++) {
-
-			if ( previousType == 1 && (messages[i].type != 1 || i == messages.length - 1)) {
-
-				timeout = (i - 1) * timeoutInterval;
-				setTimeout(handleCardMessages.bind(null, cardTypes, sender), timeout);
-				cardTypes = [];
-				timeout = i * timeoutInterval;
-				setTimeout(handleMessage.bind(null, messages[i], sender), timeout);
-			} else if ( messages[i].type == 1 && i == messages.length - 1) {
-				cardTypes.push(messages[i]);
-                		timeout = (i - 1) * timeoutInterval;
-                		setTimeout(handleCardMessages.bind(null, cardTypes, sender), timeout);
-                		cardTypes = [];
-			} else if ( messages[i].type == 1 ) {
-				cardTypes.push(messages[i]);
-			} else {
-				timeout = i * timeoutInterval;
-				setTimeout(handleMessage.bind(null, messages[i], sender), timeout);
-			}
-
-			previousType = messages[i].type;
-
-		}
-	} else if (responseText == '' && !isDefined(action)) {
-		//api ai could not evaluate input.
-		// file.log('L317 Unknown query ' , response.result.resolvedQuery);
-		src.SendTextMessage(sender, "I'm not sure what you want. Can you be more specific?");
-	} else if (isDefined(action)) {
-		handleApiAiAction(sender, action, responseText, contexts, parameters);
-	} else if (isDefined(responseData) && isDefined(responseData.facebook)) {
-		try {
-			file.log('L323 Response as formatted message ', responseData.facebook);
-			src.SendTextMessage(sender, responseData.facebook);
-		} catch (err) {
-			src.SendTextMessage(sender, err.message);
-		}
-	} else if (isDefined(responseText)) {
-
-		src.SendTextMessage(sender, responseText);
-	}
-}
-
 function sendToApiAi(sender, text) {
 
 	src.TypingOn(sender);
@@ -357,60 +212,12 @@ function sendToApiAi(sender, text) {
 
 	apiaiRequest.on('response', (response) => {
 		if (isDefined(response.result)) {
-			handleApiAiResponse(sender, response);
+			src.HandleApiAiResponse(sender, response);
 		}
 	});
 
 	apiaiRequest.on('error', (error) => file.log('L343 ',error));
 	apiaiRequest.end();
-}
-
-/*
- * Send a read receipt to indicate the message has been read
- *
- */
-function sendReadReceipt(recipientId) {
-
-	var messageData = {
-		recipient: {
-			id: recipientId
-		},
-		sender_action: "mark_seen"
-	};
-
-	api.SendAPI(messageData);
-}
-
-
-
-
-
-/*
- * Verify that the callback came from Facebook. Using the App Secret from
- * the App Dashboard, we can verify the signature that is sent with each
- * callback in the x-hub-signature field, located in the header.
- *
- * https://developers.facebook.com/docs/graph-api/webhooks#setup
- *
- */
-function verifyRequestSignature(req, res, buf) {
-	var signature = req.headers["x-hub-signature"];
-
-	if (!signature) {
-		throw new Error('Couldn\'t validate the signature.');
-	} else {
-		var elements = signature.split('=');
-		var method = elements[0];
-		var signatureHash = elements[1];
-
-		var expectedHash = crypto.createHmac('sha1', config.FB_APP_SECRET)
-			.update(buf)
-			.digest('hex');
-
-		if (signatureHash != expectedHash) {
-			throw new Error("Couldn't validate the request signature.");
-		}
-	}
 }
 
 function isDefined(obj) {
