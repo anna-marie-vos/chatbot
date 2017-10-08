@@ -6,7 +6,6 @@ const file = require('manu-file-log');
 */
 
 module.exports = function(recipientId){
-	file.log('typing off')
 		const messageData = {
 			recipient: {
 				id: recipientId

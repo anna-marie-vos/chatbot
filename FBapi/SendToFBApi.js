@@ -22,10 +22,10 @@ module.exports = function(messageData){
       var messageId = body.message_id;
 
       if (messageId) {
-        file.log("comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %s",
+        console.log("Successfully sent message with id %s to recipient %s",
         messageId, recipientId);
       } else {
-        file.log("comms/actions.callSendAPI L20, Successfully called Send API for recipient %s",
+        console.log("Successfully called Send API for recipient %s",
         recipientId);
       }
     } else {

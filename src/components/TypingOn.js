@@ -5,7 +5,6 @@ module.exports = function(recipientId){
 	/*
 	* Turn typing indicator on
 	*/
-		file.log('typing on')
 		const messageData = {
 			recipient: {
 				id: recipientId
