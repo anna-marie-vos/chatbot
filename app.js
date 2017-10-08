@@ -11,6 +11,7 @@ const uuid = require('uuid');
 const file = require('manu-file-log');
 
 const FBapi = require('./FBapi');
+const AIapi = require('./AIapi')
 const src = require('./src');
 
 
@@ -55,6 +56,7 @@ const apiAiService = apiai(config.API_AI_CLIENT_ACCESS_TOKEN, {
 	requestSource: "fb"
 });
 const sessionIds = new Map();
+
 
 // Index route
 app.get('/', function (req, res) {
@@ -149,25 +151,25 @@ function receivedMessage(event) {
 		src.HandleEcho(messageId, appId, metadata);
 		return;
 	} else if (quickReply) {
-		handleQuickReply(senderID, quickReply, messageId);
+		handleQuickReply(sessionIds.get(senderID), senderID, quickReply, messageId);
 		return;
 	}
 
 
 	if (messageText) {
 		//send message to api.ai
-		sendToApiAi(senderID, messageText);
+		AIapi.SendToApiAi(sessionIds.get(senderID), senderID, messageText);
 	} else if (messageAttachments) {
 		src.HandleMessageAttachments(messageAttachments, senderID);
 	}
 }
 
 
-function handleQuickReply(senderID, quickReply, messageId) {
+function handleQuickReply(sessionID, senderID, quickReply, messageId) {
 	var quickReplyPayload = quickReply.payload;
 	// file.log("L177 Quick reply for message %s with payload %s", messageId, quickReplyPayload);
 	//send payload to api.ai
-	sendToApiAi(senderID, quickReplyPayload);
+	AIapi.SendToApiAi(sessionID, senderID, quickReplyPayload);
 }
 
 function handleApiAiAction(sender, action, responseText, contexts, parameters) {
@@ -203,22 +205,22 @@ function handleApiAiAction(sender, action, responseText, contexts, parameters) {
 	}
 }
 
-function sendToApiAi(sender, text) {
-
-	src.TypingOn(sender);
-	let apiaiRequest = apiAiService.textRequest(text, {
-		sessionId: sessionIds.get(sender)
-	});
-
-	apiaiRequest.on('response', (response) => {
-		if (isDefined(response.result)) {
-			src.HandleApiAiResponse(sender, response);
-		}
-	});
-
-	apiaiRequest.on('error', (error) => file.log('L343 ',error));
-	apiaiRequest.end();
-}
+// function sendToApiAi(sender, text) {
+//
+// 	src.TypingOn(sender);
+// 	let apiaiRequest = apiAiService.textRequest(text, {
+// 		sessionId: sessionIds.get(sender)
+// 	});
+//
+// 	apiaiRequest.on('response', (response) => {
+// 		if (isDefined(response.result)) {
+// 			src.HandleApiAiResponse(sender, response);
+// 		}
+// 	});
+//
+// 	apiaiRequest.on('error', (error) => file.log('L343 ',error));
+// 	apiaiRequest.end();
+// }
 
 function isDefined(obj) {
 	if (typeof obj == 'undefined') {

@@ -93,3 +93,136 @@ comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613
 typing off
 comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
 comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplLCtoUle-uYf1fuSv1613871948645410
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507448743944,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507448743710,"message":{"mid":"mid.$cAALRZ0nY0kplLDevHle-vJmiIwn0","seq":2214,"text":"Hello"}}]}]}
+
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+L343 Server response error with status code: 400
+{
+  "id": "a6fec110-051a-48ef-a583-04941fcc9f65",
+  "timestamp": "2017-10-08T07:45:45.255Z",
+  "lang": "en",
+  "status": {
+    "code": 400,
+    "errorType": "bad_request",
+    "errorDetails": "Required 'sessionId' parameter is empty."
+  }
+}
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507448944737,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507448944506,"message":{"mid":"mid.$cAALRZ0nY0kplLDq_ele-vV251WAg","seq":2215,"text":"Hello"}}]}]}
+
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+L343 Server response error with status code: 400
+{
+  "id": "095eec36-fbb4-4369-b5b7-7d1dfd56d946",
+  "timestamp": "2017-10-08T07:49:05.621Z",
+  "lang": "en",
+  "status": {
+    "code": 400,
+    "errorType": "bad_request",
+    "errorDetails": "Required 'sessionId' parameter is empty."
+  }
+}
+app.js sessionIds: Map {}
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507449067133,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507449066905,"message":{"mid":"mid.$cAALRZ0nY0kplLDydmVe-vdVBfkej","seq":2216,"text":"Hello"}}]}]}
+
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+L343 Server response error with status code: 400
+{
+  "id": "68dc64e3-f1bc-4136-a066-aa0e3cf58ca1",
+  "timestamp": "2017-10-08T07:51:08.185Z",
+  "lang": "en",
+  "status": {
+    "code": 400,
+    "errorType": "bad_request",
+    "errorDetails": "Required 'sessionId' parameter is empty."
+  }
+}
+app.js sessionIds: Map {}
+app.js sessionIds: Map {}
+L86: {"object":"page","entry":[{"id":"716401161884904","time":1507449751508,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507449751283,"message":{"mid":"mid.$cAALRZ0nY0kplLEcO81e-wHGXDWVF","seq":2217,"text":"Hello"}}]}]}
+L86: {"object":"page","entry":[{"id":"716401161884904","time":1507449752187,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507449751283,"message":{"mid":"mid.$cAALRZ0nY0kplLEcO81e-wHGXDWVF","seq":2217,"text":"Hello"}}]}]}
+L86: {"object":"page","entry":[{"id":"716401161884904","time":1507449752988,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507449751283,"message":{"mid":"mid.$cAALRZ0nY0kplLEcO81e-wHGXDWVF","seq":2217,"text":"Hello"}}]}]}
+L86: {"object":"page","entry":[{"id":"716401161884904","time":1507449753785,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507449751283,"message":{"mid":"mid.$cAALRZ0nY0kplLEcO81e-wHGXDWVF","seq":2217,"text":"Hello"}}]}]}
+L86: {"object":"page","entry":[{"id":"716401161884904","time":1507449755181,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507449751283,"message":{"mid":"mid.$cAALRZ0nY0kplLEcO81e-wHGXDWVF","seq":2217,"text":"Hello"}}]}]}
+L86: {"object":"page","entry":[{"id":"716401161884904","time":1507449758743,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507449751283,"message":{"mid":"mid.$cAALRZ0nY0kplLEcO81e-wHGXDWVF","seq":2217,"text":"Hello"}}]}]}
+L86: {"object":"page","entry":[{"id":"716401161884904","time":1507449775841,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507449751283,"message":{"mid":"mid.$cAALRZ0nY0kplLEcO81e-wHGXDWVF","seq":2217,"text":"Hello"}}]}]}
+app.js sessionIds: Map {}
+app.js sessionIds: Map {}
+app.js sessionIds: Map {}
+app.js sessionIds: Map {}
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507449852371,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507449751283,"message":{"mid":"mid.$cAALRZ0nY0kplLEcO81e-wHGXDWVF","seq":2217,"text":"Hello"}}]}]}
+
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+typing off
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %scomms/actions.callSendAPI L20, Successfully called Send API for recipient %smid.$cAALRZ0nY0kplLEifO1e-wNXL2Gyi1613871948645410
+1613871948645410
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507449868493,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507449868270,"message":{"mid":"mid.$cAALRZ0nY0kplLEjX7le-wOPVmDkm","seq":2220,"text":"Hello"}}]}]}
+
+typing offcomms/actions.callSendAPI L20, Successfully called Send API for recipient %s
+1613871948645410
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplLEjdb1e-wOVZstvM1613871948645410
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507449889793,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507449889554,"message":{"mid":"mid.$cAALRZ0nY0kplLEkrEle-wPic7lTz","seq":2223,"text":"do you have any job openings?"}}]}]}
+
+typing off
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %scomms/actions.callSendAPI L20, Successfully called Send API for recipient %smid.$cAALRZ0nY0kplLEkwNle-wPoLCvb61613871948645410
+1613871948645410
+L86: {"object":"page","entry":[{"id":"716401161884904","time":1507449894285,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507449894049,"message":{"quick_reply":{"payload":"accountant"},"mid":"mid.$cAALRZ0nY0kplLEk8oVe-wP0B8zb6","seq":2226,"text":"accountant"}}]}]}
+L86: {"object":"page","entry":[{"id":"716401161884904","time":1507449895019,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507449894049,"message":{"quick_reply":{"payload":"accountant"},"mid":"mid.$cAALRZ0nY0kplLEk8oVe-wP0B8zb6","seq":2226,"text":"accountant"}}]}]}
+L86: {"object":"page","entry":[{"id":"716401161884904","time":1507449895698,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507449894049,"message":{"quick_reply":{"payload":"accountant"},"mid":"mid.$cAALRZ0nY0kplLEk8oVe-wP0B8zb6","seq":2226,"text":"accountant"}}]}]}
+L86: {"object":"page","entry":[{"id":"716401161884904","time":1507449896475,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507449894049,"message":{"quick_reply":{"payload":"accountant"},"mid":"mid.$cAALRZ0nY0kplLEk8oVe-wP0B8zb6","seq":2226,"text":"accountant"}}]}]}
+L86: {"object":"page","entry":[{"id":"716401161884904","time":1507449897820,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507449894049,"message":{"quick_reply":{"payload":"accountant"},"mid":"mid.$cAALRZ0nY0kplLEk8oVe-wP0B8zb6","seq":2226,"text":"accountant"}}]}]}
+L86: {"object":"page","entry":[{"id":"716401161884904","time":1507449901568,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507449894049,"message":{"quick_reply":{"payload":"accountant"},"mid":"mid.$cAALRZ0nY0kplLEk8oVe-wP0B8zb6","seq":2226,"text":"accountant"}}]}]}
+L86: {"object":"page","entry":[{"id":"716401161884904","time":1507449917910,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507449894049,"message":{"quick_reply":{"payload":"accountant"},"mid":"mid.$cAALRZ0nY0kplLEk8oVe-wP0B8zb6","seq":2226,"text":"accountant"}}]}]}
+app.js sessionIds: Map {}
+app.js sessionIds: Map {}
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507449988951,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507449894049,"message":{"quick_reply":{"payload":"accountant"},"mid":"mid.$cAALRZ0nY0kplLEk8oVe-wP0B8zb6","seq":2226,"text":"accountant"}}]}]}
+
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+typing off
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplLEq0bVe-wVsZXh2Y1613871948645410
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+L86: {"object":"page","entry":[{"id":"716401161884904","time":1507450011630,"messaging":[{"recipient":{"id":"716401161884904"},"timestamp":1507450011630,"sender":{"id":"1613871948645410"},"postback":{"payload":"FACEBOOK_WELCOME","title":"Get Started"}}]}]}
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplLEsKKVe-wXCHBcBg1613871948645410
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507450021802,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507450021578,"message":{"mid":"mid.$cAALRZ0nY0kplLEsuyle-wXmKkQyy","seq":2233,"text":"do you have any job openings?"}}]}]}
+
+typing off
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %scomms/actions.callSendAPI L20, Successfully called Send API for recipient %smid.$cAALRZ0nY0kplLEs0DVe-wXsBUddI1613871948645410
+1613871948645410
+L86: typing on
+{"object":"page","entry":[{"id":"716401161884904","time":1507450025603,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507450025365,"message":{"quick_reply":{"payload":"accountant"},"mid":"mid.$cAALRZ0nY0kplLEs9lVe-wX08aUHP","seq":2236,"text":"accountant"}}]}]}
+typing off
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplLEtCjVe-wX6hIvL01613871948645410
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+typing onL86: 
+{"object":"page","entry":[{"id":"716401161884904","time":1507450030012,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507450029741,"message":{"mid":"mid.$cAALRZ0nY0kplLEtOrVe-wYGB2eLe","seq":2239,"text":"ok"}}]}]}
+typing off
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplLEtTc1e-wYLazmNR1613871948645410
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507450034085,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507450033851,"message":{"mid":"mid.$cAALRZ0nY0kplLEteu1e-wYWGQV2o","seq":2242,"text":"anna"}}]}]}
+
+typing off
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %scomms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+mid.$cAALRZ0nY0kplLEtj81e-wYb7Dkxa1613871948645410
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507450038677,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507450038440,"message":{"mid":"mid.$cAALRZ0nY0kplLEtwqFe-wYoBDegu","seq":2245,"text":"manager"}}]}]}
+
+typing off
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplLEt1kVe-wYtiE6ez1613871948645410
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507450042196,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507450041962,"message":{"mid":"mid.$cAALRZ0nY0kplLEt-ale-wY1x2VI6","seq":2248,"text":"12"}}]}]}
+
+typing off
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplLEuDlle-wY7jgG_O1613871948645410
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507450046117,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507450045893,"message":{"mid":"mid.$cAALRZ0nY0kplLEuNxVe-wZE94cMd","seq":2251,"text":"123456"}}]}]}
+
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+typing off
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplLEuTele-wZLcynX21613871948645410
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
