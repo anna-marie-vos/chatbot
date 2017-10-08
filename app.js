@@ -125,8 +125,6 @@ function receivedMessage(event) {
 	if (!sessionIds.has(senderID)) {
 		sessionIds.set(senderID, uuid.v1());
 	}
-	// file.log("L139 Received message for user %d and page %d at %d with message:", senderID, recipientID, timeOfMessage);
-	// file.log("L140 message: ",JSON.stringify(message));
 
 	var isEcho = message.is_echo;
 	var messageId = message.mid;
@@ -158,43 +156,43 @@ function receivedMessage(event) {
 
 function handleQuickReply(sessionID, senderID, quickReply, messageId) {
 	var quickReplyPayload = quickReply.payload;
-	// file.log("L177 Quick reply for message %s with payload %s", messageId, quickReplyPayload);
+
 	//send payload to api.ai
 	AIapi.SendToApiAi(sessionID, senderID, quickReplyPayload);
 }
 
-function handleApiAiAction(sender, action, responseText, contexts, parameters) {
-	switch (action) {
-		// case 'detailed-application':
-		// 	if(isDefined(contexts[0]) && contexts[0].name =="job_application" &&contexts[0].parameters){
-		// 		file.log("L192 content is: ",contexts[0].parameters)
-		// 	}
-		// 	break;
-		case 'job-enquiry':
-			let replies = [
-	      {
-					"content_type":"text",
-	        "title":"Sales Assistant",
-	        "payload":"Sales Assistant"
-	      },
-	      {
-					"content_type":"text",
-	        "title":"Accountant",
-	        "payload":"Accountant"
-	      },
-	      {
-	        "content_type":"text",
-	        "title":"Not interested",
-	        "payload":"Not interested"
-	      }
-	    ]
-			src.SendQuickReply(sender, responseText, replies);
-			break;
-		default:
-			//unhandled action, just send back the text
-			src.SendTextMessage(sender, responseText);
-	}
-}
+// function handleApiAiAction(sender, action, responseText, contexts, parameters) {
+// 	switch (action) {
+// 		// case 'detailed-application':
+// 		// 	if(isDefined(contexts[0]) && contexts[0].name =="job_application" &&contexts[0].parameters){
+// 		// 		file.log("L192 content is: ",contexts[0].parameters)
+// 		// 	}
+// 		// 	break;
+// 		case 'job-enquiry':
+// 			let replies = [
+// 	      {
+// 					"content_type":"text",
+// 	        "title":"Sales Assistant",
+// 	        "payload":"Sales Assistant"
+// 	      },
+// 	      {
+// 					"content_type":"text",
+// 	        "title":"Accountant",
+// 	        "payload":"Accountant"
+// 	      },
+// 	      {
+// 	        "content_type":"text",
+// 	        "title":"Not interested",
+// 	        "payload":"Not interested"
+// 	      }
+// 	    ]
+// 			src.SendQuickReply(sender, responseText, replies);
+// 			break;
+// 		default:
+// 			//unhandled action, just send back the text
+// 			src.SendTextMessage(sender, responseText);
+// 	}
+// }
 
 function isDefined(obj) {
 	if (typeof obj == 'undefined') {
