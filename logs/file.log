@@ -1,35 +1,47 @@
-typing on
-comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
-L343 typing offTypeError: src.HandleApiAiAction is not a function
-    at Object.module.exports [as HandleApiAiResponse] (/home/amv/Workspace/chatbot/src/components/HandleApiAiResponse.js:52:7)
-    at TextRequest.apiaiRequest.on (/home/amv/Workspace/chatbot/app.js:215:8)
-    at emitOne (events.js:96:13)
-    at TextRequest.emit (events.js:188:7)
-    at IncomingMessage.<anonymous> (/home/amv/Workspace/chatbot/node_modules/apiai/module/request.js:42:26)
-    at emitNone (events.js:91:20)
-    at IncomingMessage.emit (events.js:185:7)
-    at endReadableNT (_stream_readable.js:974:12)
-    at _combinedTickCallback (internal/process/next_tick.js:74:11)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
+L86: typing on
+{"object":"page","entry":[{"id":"716401161884904","time":1507429889078,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507428840782,"message":{"mid":"mid.$cAALRZ0nY0kplKwf9Tle-cK0mgUNF","seq":2157,"text":"Hello"}}]}]}
+L86: {"object":"page","entry":[{"id":"716401161884904","time":1507429908259,"messaging":[{"recipient":{"id":"716401161884904"},"timestamp":1507429908259,"sender":{"id":"1613871948645410"},"postback":{"payload":"FACEBOOK_WELCOME","title":"Get Started"}}]}]}
+L86: {"object":"page","entry":[{"id":"716401161884904","time":1507429908259,"messaging":[{"recipient":{"id":"716401161884904"},"timestamp":1507429908259,"sender":{"id":"1613871948645410"},"postback":{"payload":"FACEBOOK_WELCOME","title":"Get Started"}}]}]}
+L86: {"object":"page","entry":[{"id":"716401161884904","time":1507429908259,"messaging":[{"recipient":{"id":"716401161884904"},"timestamp":1507429908259,"sender":{"id":"1613871948645410"},"postback":{"payload":"FACEBOOK_WELCOME","title":"Get Started"}}]}]}
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507429974943,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507428840782,"message":{"mid":"mid.$cAALRZ0nY0kplKwf9Tle-cK0mgUNF","seq":2157,"text":"Hello"}}]}]}
 
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507430060089,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507428840782,"message":{"mid":"mid.$cAALRZ0nY0kplKwf9Tle-cK0mgUNF","seq":2157,"text":"Hello"}}]}]}
+
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507430139688,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507428840782,"message":{"mid":"mid.$cAALRZ0nY0kplKwf9Tle-cK0mgUNF","seq":2157,"text":"Hello"}}]}]}
+
+typing offcomms/actions.callSendAPI L20, Successfully called Send API for recipient %s
+1613871948645410
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507430140370,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507428915147,"message":{"mid":"mid.$cAALRZ0nY0kplKwkfy1e-cPXFsS8E","seq":2158,"text":"Howdy"}}]}]}
+
+typing off
 comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
-typing on
-typing offL343 
-TypeError: src.SendTextMessage is not a function
-    at module.exports (/home/amv/Workspace/chatbot/src/components/HandleApiAiAction.js:33:8)
-    at Object.module.exports [as HandleApiAiResponse] (/home/amv/Workspace/chatbot/src/components/HandleApiAiResponse.js:53:3)
-    at TextRequest.apiaiRequest.on (/home/amv/Workspace/chatbot/app.js:215:8)
-    at emitOne (events.js:96:13)
-    at TextRequest.emit (events.js:188:7)
-    at IncomingMessage.<anonymous> (/home/amv/Workspace/chatbot/node_modules/apiai/module/request.js:42:26)
-    at emitNone (events.js:91:20)
-    at IncomingMessage.emit (events.js:185:7)
-    at endReadableNT (_stream_readable.js:974:12)
-    at _combinedTickCallback (internal/process/next_tick.js:74:11)
-comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
-comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
-typing on
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507430141060,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507429458546,"message":{"mid":"mid.$cAALRZ0nY0kplKxFqcle-cwh0aHQa","seq":2161,"text":"Hello"}}]}]}
+
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplKxvVvle-daNRqjtt1613871948645410
 comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
 typing off
-comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplKwDj2Ve-bubua_F_1613871948645410
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+L86: {"object":"page","entry":[{"id":"716401161884904","time":1507430141706,"messaging":[{"recipient":{"id":"716401161884904"},"timestamp":1507430141706,"sender":{"id":"1613871948645410"},"postback":{"payload":"FACEBOOK_WELCOME","title":"Get Started"}}]}]}
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplKxvXwVe-daO2LZ2s1613871948645410
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507430141738,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507430105902,"message":{"mid":"mid.$cAALRZ0nY0kplKxtLLle-dYCnbYpx","seq":2168,"text":"hello"}}]}]}
+
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplKxvYX1e-daQU4M3L1613871948645410
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplKxvZBFe-daQ-6W-e1613871948645410
+typing off
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507430142355,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507430122353,"message":{"mid":"mid.$cAALRZ0nY0kplKxuLcVe-dZC2lT2L","seq":2169,"text":"Hi"}}]}]}
+
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplKxvbCVe-daTAOVyx1613871948645410
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+typing off
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplKxvdSle-daVQNzK81613871948645410
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507430149863,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507430149631,"message":{"mid":"mid.$cAALRZ0nY0kplKxv1_1e-datbyqKK","seq":2187,"text":"hi"}}]}]}
+
+typing off
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplKxv8uFe-da0rsouD1613871948645410
 comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410

@@ -80,7 +80,7 @@ app.get('/webhook/', function (req, res) {
  */
 app.post('/webhook/', function (req, res) {
 	var data = req.body;
-	// file.log('L86: ',JSON.stringify(data));
+	file.log('L86: ',JSON.stringify(data));
 
 
 
