@@ -1,5 +1,5 @@
 
-const api = require('../../api');
+const FBapi = require('../../FBapi');
 const config = require('../../config');
 
 /*
@@ -26,5 +26,5 @@ module.exports =function(recipientId) {
 		}
 	};
 
-	api.SendAPI(messageData);
+	FBapi.SendToFBApi(messageData);
 }

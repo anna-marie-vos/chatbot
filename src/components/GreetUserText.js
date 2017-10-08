@@ -1,5 +1,5 @@
 const request = require('request');
-const api = require('../../api');
+const FBapi = require('../../FBapi');
 const config = require('../../config');
 const bodyParser = require('body-parser');
 const SendTextMessage = require('./SendTextMessage')

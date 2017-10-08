@@ -1,4 +1,4 @@
-const api = require('../../api')
+const FBapi = require('../../FBapi')
 
 
 module.exports =function(recipientId, elements) {
@@ -17,5 +17,5 @@ module.exports =function(recipientId, elements) {
 		}
 	};
 
-	api.SendAPI(messageData);
+	FBapi.SendToFBApi(messageData);
 }

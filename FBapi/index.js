@@ -1,8 +1,8 @@
-const SendAPI = require('./SendAPI')
+const SendToFBApi = require('./SendToFBApi')
 const VerifyRequestSignature = require('./VerifyRequestSignature')
 
 module.exports = {
-  SendAPI,
+  SendToFBApi,
   VerifyRequestSignature,
 
 }

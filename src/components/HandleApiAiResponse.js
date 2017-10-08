@@ -1,4 +1,4 @@
-const api = require('../../api')
+const FBapi = require('../../FBapi')
 const file = require('manu-file-log')
 const TypingOff = require('./TypingOff')
 const HandleCardMessages = require('./HandleCardMessages')

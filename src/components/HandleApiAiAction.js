@@ -1,4 +1,4 @@
-const api = require('../../api')
+const FBapi = require('../../FBapi')
 const SendQuickReply = require('./SendQuickReply')
 const SendTextMessage = require('./SendTextMessage')
 

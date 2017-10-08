@@ -1,4 +1,4 @@
-const api = require('../../api')
+const FBapi = require('../../FBapi')
 
 module.exports =function(recipientId, videoName) {
 	var messageData = {
@@ -15,5 +15,5 @@ module.exports =function(recipientId, videoName) {
 		}
 	};
 
-	api.SendAPI(messageData);
+	FBapi.SendToFBApi(messageData);
 }

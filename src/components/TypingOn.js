@@ -1,4 +1,4 @@
-const api = require('../../api');
+const FBapi = require('../../FBapi');
 const file = require('manu-file-log');
 
 module.exports = function(recipientId){
@@ -12,5 +12,5 @@ module.exports = function(recipientId){
 			},
 			sender_action: "typing_on"
 		};
-		api.SendAPI(messageData);
+		FBapi.SendToFBApi(messageData);
 }

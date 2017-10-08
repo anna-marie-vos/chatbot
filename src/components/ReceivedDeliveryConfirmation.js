@@ -1,4 +1,4 @@
-const api = require('../../api')
+const FBapi = require('../../FBapi')
 /*
  * Delivery Confirmation Event
  *

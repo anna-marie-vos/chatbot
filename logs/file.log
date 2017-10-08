@@ -45,3 +45,51 @@ typing off
 comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
 comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplKxv8uFe-da0rsouD1613871948645410
 comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507430227060,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507430226824,"message":{"mid":"mid.$cAALRZ0nY0kplKx0jiFe-dfa9HkTX","seq":2190,"text":"do you have any job vacencies?"}}]}]}
+
+typing offcomms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplKx0pWle-dfhTpCdu1613871948645410
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507430231715,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507430231348,"message":{"quick_reply":{"payload":"accountant"},"mid":"mid.$cAALRZ0nY0kplKx01NFe-dfspzWt3","seq":2193,"text":"accountant"}}]}]}
+
+typing off
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplKx062Fe-dfyyoCPN1613871948645410
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507430236220,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507430235985,"message":{"mid":"mid.$cAALRZ0nY0kplKx1HUVe-df-yKFPg","seq":2196,"text":"ok"}}]}]}
+
+typing off
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplKx1MNVe-dgEKzoQU1613871948645410
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507430240009,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507430239776,"message":{"mid":"mid.$cAALRZ0nY0kplKx1WIFe-dgNl5QiB","seq":2199,"text":"Anna"}}]}]}
+
+typing off
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplKx1a_Ve-dgS8_aLS1613871948645410
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507430246895,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507430246540,"message":{"mid":"mid.$cAALRZ0nY0kplKx1wjFe-dgn_Hlkb","seq":2202,"text":"manager"}}]}]}
+
+typing off
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %scomms/actions.callSendAPI L20, Successfully called Send API for recipient %smid.$cAALRZ0nY0kplKx1201e-dguyIWve1613871948645410
+1613871948645410
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507430250968,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507430250523,"message":{"mid":"mid.$cAALRZ0nY0kplKx2AG1e-dg3ikpno","seq":2205,"text":"12"}}]}]}
+
+typing off
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplKx2F7Fe-dg93PxIt1613871948645410
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507430255425,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507430255185,"message":{"mid":"mid.$cAALRZ0nY0kplKx2SUVe-dhJjSx59","seq":2208,"text":"123456"}}]}]}
+
+typing off
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplKx2Xjle-dhPhTWFg1613871948645410
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+L86: typing on{"object":"page","entry":[{"id":"716401161884904","time":1507447937325,"messaging":[{"sender":{"id":"1613871948645410"},"recipient":{"id":"716401161884904"},"timestamp":1507447937048,"message":{"mid":"mid.$cAALRZ0nY0kplLCtgGFe-uYXDNmuA","seq":2211,"text":"Hello"}}]}]}
+
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+typing off
+comms/actions.callSendAPI L20, Successfully called Send API for recipient %s1613871948645410
+comms/actions.callSendAPI L20, Successfully sent message with id %s to recipient %smid.$cAALRZ0nY0kplLCtoUle-uYf1fuSv1613871948645410

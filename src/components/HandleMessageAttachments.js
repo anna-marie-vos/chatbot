@@ -1,4 +1,4 @@
-const api = require('../../api')
+const FBapi = require('../../FBapi')
 const SendTextMessage = require('./SendTextMessage')
 
 module.exports =function(messageAttachments, senderID){

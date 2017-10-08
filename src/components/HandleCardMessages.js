@@ -1,4 +1,4 @@
-const api = require('../../api')
+const FBapi = require('../../FBapi')
 const SendGenericMessage = require('./SendGenericMessage')
 
 module.exports =function(messages, sender) {

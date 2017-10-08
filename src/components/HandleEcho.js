@@ -1,4 +1,4 @@
-const api = require('../../api')
+const FBapi = require('../../FBapi')
 
 
 //https://developers.facebook.com/docs/messenger-platform/webhook-reference/message-echo

@@ -1,4 +1,4 @@
-const api = require('../../api')
+const FBapi = require('../../FBapi')
 
 /*
  * Send a button message using the Send API.
@@ -20,5 +20,5 @@ module.exports =function(recipientId, text, buttons) {
 		}
 	};
 
-	api.SendAPI(messageData);
+	FBapi.SendToFBApi(messageData);
 }

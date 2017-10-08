@@ -1,4 +1,4 @@
-const api = require('../../api')
+const FBapi = require('../../FBapi')
 const SendQuickReply = require('./SendQuickReply')
 const SendTextMessage = require('./SendTextMessage')
 const SendImageMessage = require('./SendImageMessage')
@@ -34,7 +34,7 @@ module.exports =function(message, sender) {
 
 			};
 
-			api.SendAPI(messageData);
+			FBapi.SendToFBApi(messageData);
 
 			break;
 	}

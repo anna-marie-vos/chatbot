@@ -1,4 +1,4 @@
-const api = require('../../api')
+const FBapi = require('../../FBapi')
 
 /*
  * Send a message with Quick Reply buttons.
@@ -17,7 +17,7 @@ module.exports =function(recipientId, text, replies, metadata) {
 		}
 	};
 
-	api.SendAPI(messageData);
+	FBapi.SendToFBApi(messageData);
 }
 
 function isDefined(obj) {
