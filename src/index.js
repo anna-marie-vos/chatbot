@@ -25,6 +25,7 @@ const HandleMessage = require('./components/HandleMessage')
 const HandleEcho = require('./components/HandleEcho')
 const HandleApiAiResponse = require('./components/HandleApiAiResponse')
 
+
 module.exports = {
   TypingOn,
   TypingOff,
@@ -52,4 +53,5 @@ module.exports = {
   HandleMessage,
   HandleEcho,
   HandleApiAiResponse,
+
 }

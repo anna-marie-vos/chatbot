@@ -48,15 +48,11 @@ app.use(bodyParser.urlencoded({
 // Process application/json
 app.use(bodyParser.json())
 
-
-
-
 const apiAiService = apiai(config.API_AI_CLIENT_ACCESS_TOKEN, {
 	language: "en",
 	requestSource: "fb"
 });
 const sessionIds = new Map();
-
 
 // Index route
 app.get('/', function (req, res) {
@@ -83,8 +79,6 @@ app.get('/webhook/', function (req, res) {
 app.post('/webhook/', function (req, res) {
 	var data = req.body;
 	file.log('L86: ',JSON.stringify(data));
-
-
 
 	// Make sure this is a page subscription
 	if (data.object == 'page') {
@@ -120,9 +114,6 @@ app.post('/webhook/', function (req, res) {
 		res.sendStatus(200);
 	}
 });
-
-
-
 
 
 function receivedMessage(event) {
@@ -204,23 +195,6 @@ function handleApiAiAction(sender, action, responseText, contexts, parameters) {
 			src.SendTextMessage(sender, responseText);
 	}
 }
-
-// function sendToApiAi(sender, text) {
-//
-// 	src.TypingOn(sender);
-// 	let apiaiRequest = apiAiService.textRequest(text, {
-// 		sessionId: sessionIds.get(sender)
-// 	});
-//
-// 	apiaiRequest.on('response', (response) => {
-// 		if (isDefined(response.result)) {
-// 			src.HandleApiAiResponse(sender, response);
-// 		}
-// 	});
-//
-// 	apiaiRequest.on('error', (error) => file.log('L343 ',error));
-// 	apiaiRequest.end();
-// }
 
 function isDefined(obj) {
 	if (typeof obj == 'undefined') {
